@@ -7,13 +7,13 @@ use App\Models\User;
 
 class DashboardController extends Controller
 {
-    //
     public function index()
     {
-        // Récupérer tous les utilisateurs de type client
-        $clients = User::where('role', 'client')->get();
-
-        // Retourner la vue avec la liste des clients
-        return view('welcome', compact('clients'));
+        // Récupérer tous les utilisateurs de type artisan
+        $artisans = User::where('role', 'artisan')->get();
+        
+        // Retourner la vue avec la liste des artisans et des clients
+        return view('dashboard.index', compact('artisans'));
     }
 }
+

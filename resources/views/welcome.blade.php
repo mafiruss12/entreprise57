@@ -59,14 +59,14 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($clients as $client)
+                @foreach($artisans as $artisan)
                     <tr>
-                        <td>{{ $client->id }}</td>
-                        <td>{{ $client->name }}</td>
-                        <td>{{ $client->email }}</td>
-                        <td>{{ $client->phone }}</td>
-                        <td>{{ $client->address }}</td>
-                        <td>{{ $client->city }}</td>
+                        <td>{{ $artisan->id }}</td>
+                        <td>{{ $artisan->name }}</td>
+                        <td>{{ $artisan->email }}</td>
+                        <td>{{ $artisan->phone }}</td>
+                        <td>{{ $artisan->address }}</td>
+                        <td>{{ $artisan->city }}</td>
                     </tr>
                 @endforeach
             </tbody>
