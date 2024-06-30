@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -11,9 +10,8 @@ class DashboardController extends Controller
     {
         // Récupérer tous les utilisateurs de type artisan
         $artisans = User::where('role', 'artisan')->get();
-        
-        // Retourner la vue avec la liste des artisans et des clients
+
+        // Retourner la vue avec la liste des artisans
         return view('dashboard.index', compact('artisans'));
     }
 }
-
