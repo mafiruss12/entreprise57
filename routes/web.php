@@ -54,3 +54,6 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/profile', [ProfileController::class, 'show'])->name('profile');
 Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
 Route::post('/profile/edit', [ProfileController::class, 'update'])->name('profile.update');
+// routes/web.php
+
+Route::get('/chat', [ChatController::class, 'index'])->name('chat')->middleware('auth');

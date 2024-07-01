@@ -297,7 +297,7 @@
 
 <div class="container-fluid ">
   <div class="row ">
-   <div class="sidebar border border-right col-md-3 col-lg-2 p-0 bg-body-tertiary " style="height:100vh">
+   <div class="sidebar border border-right col-md-3 col-lg-2 p-0 bg-body-tertiary " style="height:100vh;position:fixed;top:50px">
   <div class="offcanvas-md offcanvas-end bg-body-tertiary " tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title" id="sidebarMenuLabel">Company name</h5>
@@ -394,7 +394,7 @@
 </div>
 
 
-    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4" style="margin-top:100px">
   
 
  <div class="container-fluid py-4">
@@ -419,14 +419,15 @@
                         </div>
                     </div>
                
-</table>
-            </div>
-            
-    </div>
-
-    <div class="container bg-primary text-white mt-5">
+</table> <div class="container bg-primary text-white mt-5">
 <marquee behavior="" direction="left">Lorem ipsum <span style="color:red"> <b>dolor sit</b></span>, amet consectetur adipisicing elit. Nisi error repellat quo, neque in esse consectetur omnis voluptatibus sint possimus, obcaecati eius? Vitae ipsum neque similique accusamus in nisi aspernatur!</marquee>
 </div>
+            </div>
+            <div class="mt-5"style="width:100%">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15890.646633210297!2d-4.079595959654543!3d5.315366530169723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1ea0a80d1c99f%3A0xf66855c5aad3bc3f!2sYopougon%20Kout%C3%A9%2C%20Abidjan!5e0!3m2!1sfr!2sci!4v1719834438725!5m2!1sfr!2sci" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>
+   
     </main>
   </div>
 </div>

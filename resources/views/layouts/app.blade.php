@@ -17,7 +17,9 @@
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body>
-    <div id="app">
+    <div id="app" style="position: fixed;
+    width: 100%;
+    z-index: 111;">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a href="{{ url('/') }}" style="text-decoration:none;font-size:20px;color:black;">
