@@ -136,578 +136,9 @@
     </script>
 
     
-            <!-- Navbar -->
-            <!-- End Navbar -->
-            <!-- @section('content')
-        <div class="container">
-            @if (Auth::check())
-                <p>Bienvenue, {{ Auth::user()->name }}</p>
-            @else
-                <p>Connexion</p>
-            @endif
-        </div>
-    @endsection  -->
-<!-- fin -->
+       
 
-        <!-- <div class="container-fluid py-4">
-            <div class="row">
-                <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-                    <div class="card">
-                        <div class="card-header p-3 pt-2">
-                            <div
-                                class="icon icon-lg icon-shape bg-gradient-dark shadow-dark text-center border-radius-xl mt-n4 position-absolute">
-                                <i class="material-icons opacity-10">weekend</i>
-                            </div>
-                            <div class="text-end pt-1">
-                                <p class="text-sm mb-0 text-capitalize">Today's Money</p>
-                                <h4 class="mb-0">$53k</h4>
-                            </div>
-                        </div>
-                        <hr class="dark horizontal my-0">
-                        <div class="card-footer p-3">
-                            <p class="mb-0"><span class="text-success text-sm font-weight-bolder">+55% </span>than
-                                lask week</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-                    <div class="card">
-                        <div class="card-header p-3 pt-2">
-                            <div
-                                class="icon icon-lg icon-shape bg-gradient-primary shadow-primary text-center border-radius-xl mt-n4 position-absolute">
-                                <i class="material-icons opacity-10">person</i>
-                            </div>
-                            <div class="text-end pt-1">
-                                <p class="text-sm mb-0 text-capitalize">Today's Users</p>
-                                <h4 class="mb-0">2,300</h4>
-                            </div>
-                        </div>
-                        <hr class="dark horizontal my-0">
-                        <div class="card-footer p-3">
-                            <p class="mb-0"><span class="text-success text-sm font-weight-bolder">+3% </span>than
-                                lask month</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-                    <div class="card">
-                        <div class="card-header p-3 pt-2">
-                            <div
-                                class="icon icon-lg icon-shape bg-gradient-success shadow-success text-center border-radius-xl mt-n4 position-absolute">
-                                <i class="material-icons opacity-10">person</i>
-                            </div>
-                            <div class="text-end pt-1">
-                                <p class="text-sm mb-0 text-capitalize">New Clients</p>
-                                <h4 class="mb-0">3,462</h4>
-                            </div>
-                        </div>
-                        <hr class="dark horizontal my-0">
-                        <div class="card-footer p-3">
-                            <p class="mb-0"><span class="text-danger text-sm font-weight-bolder">-2%</span> than
-                                yesterday</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-sm-6">
-                    <div class="card">
-                        <div class="card-header p-3 pt-2">
-                            <div
-                                class="icon icon-lg icon-shape bg-gradient-info shadow-info text-center border-radius-xl mt-n4 position-absolute">
-                                <i class="material-icons opacity-10">weekend</i>
-                            </div>
-                            <div class="text-end pt-1">
-                                <p class="text-sm mb-0 text-capitalize">Sales</p>
-                                <h4 class="mb-0">$103,430</h4>
-                            </div>
-                        </div>
-                        <hr class="dark horizontal my-0">
-                        <div class="card-footer p-3">
-                            <p class="mb-0"><span class="text-success text-sm font-weight-bolder">+5% </span>than
-                                yesterday</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-4">
-                <div class="col-lg-4 col-md-6 mt-4 mb-4">
-                    <div class="card z-index-2 ">
-                        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
-                            <div class="bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1">
-                                <div class="chart">
-                                    <canvas id="chart-bars" class="chart-canvas" height="170"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h6 class="mb-0 ">Website Views</h6>
-                            <p class="text-sm ">Last Campaign Performance</p>
-                            <hr class="dark horizontal">
-                            <div class="d-flex ">
-                                <i class="material-icons text-sm my-auto me-1">schedule</i>
-                                <p class="mb-0 text-sm"> campaign sent 2 days ago </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mt-4 mb-4">
-                    <div class="card z-index-2  ">
-                        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
-                            <div class="bg-gradient-success shadow-success border-radius-lg py-3 pe-1">
-                                <div class="chart">
-                                    <canvas id="chart-line" class="chart-canvas" height="170"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h6 class="mb-0 "> Daily Sales </h6>
-                            <p class="text-sm "> (<span class="font-weight-bolder">+15%</span>) increase in today
-                                sales. </p>
-                            <hr class="dark horizontal">
-                            <div class="d-flex ">
-                                <i class="material-icons text-sm my-auto me-1">schedule</i>
-                                <p class="mb-0 text-sm"> updated 4 min ago </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mt-4 mb-3">
-                    <div class="card z-index-2 ">
-                        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
-                            <div class="bg-gradient-dark shadow-dark border-radius-lg py-3 pe-1">
-                                <div class="chart">
-                                    <canvas id="chart-line-tasks" class="chart-canvas" height="170"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h6 class="mb-0 ">Completed Tasks</h6>
-                            <p class="text-sm ">Last Campaign Performance</p>
-                            <hr class="dark horizontal">
-                            <div class="d-flex ">
-                                <i class="material-icons text-sm my-auto me-1">schedule</i>
-                                <p class="mb-0 text-sm">just updated</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row mb-4">
-                <div class="col-lg-8 col-md-6 mb-md-0 mb-4">
-                    <div class="card">
-                        <div class="card-header pb-0">
-                            <div class="row">
-                                <div class="col-lg-6 col-7">
-                                    <h6>Projects</h6>
-                                    <p class="text-sm mb-0">
-                                        <i class="fa fa-check text-info" aria-hidden="true"></i>
-                                        <span class="font-weight-bold ms-1">30 done</span> this month
-                                    </p>
-                                </div>
-                                <div class="col-lg-6 col-5 my-auto text-end">
-                                    <div class="dropdown float-lg-end pe-4">
-                                        <a class="cursor-pointer" id="dropdownTable" data-bs-toggle="dropdown"
-                                            aria-expanded="false">
-                                            <i class="fa fa-ellipsis-v text-secondary"></i>
-                                        </a>
-                                        <ul class="dropdown-menu px-2 py-3 ms-sm-n4 ms-n5"
-                                            aria-labelledby="dropdownTable">
-                                            <li><a class="dropdown-item border-radius-md" href="javascript:;">Action</a>
-                                            </li>
-                                            <li><a class="dropdown-item border-radius-md" href="javascript:;">Another
-                                                    action</a></li>
-                                            <li><a class="dropdown-item border-radius-md" href="javascript:;">Something
-                                                    else here</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body px-0 pb-2">
-                            <div class="table-responsive">
-                                <table class="table align-items-center mb-0">
-                                    <thead>
-                                        <tr>
-                                            <th
-                                                class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                                Companies</th>
-                                            <th
-                                                class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
-                                                Members</th>
-                                            <th
-                                                class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                                Budget</th>
-                                            <th
-                                                class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                                Completion</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex px-2 py-1">
-                                                    <div>
-                                                        <img src="{{ asset('assets') }}/img/small-logos/logo-xd.svg"
-                                                            class="avatar avatar-sm me-3" alt="xd">
-                                                    </div>
-                                                    <div class="d-flex flex-column justify-content-center">
-                                                        <h6 class="mb-0 text-sm">Material XD Version</h6>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="avatar-group mt-2">
-                                                    <a href="javascript:;" class="avatar avatar-xs rounded-circle"
-                                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                                        title="Ryan Tompson">
-                                                        <img src="{{ asset('assets') }}/img/team-1.jpg" alt="team1">
-                                                    </a>
-                                                    <a href="javascript:;" class="avatar avatar-xs rounded-circle"
-                                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                                        title="Romina Hadid">
-                                                        <img src="{{ asset('assets') }}/img/team-2.jpg" alt="team2">
-                                                    </a>
-                                                    <a href="javascript:;" class="avatar avatar-xs rounded-circle"
-                                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                                        title="Alexander Smith">
-                                                        <img src="{{ asset('assets') }}/img/team-3.jpg" alt="team3">
-                                                    </a>
-                                                    <a href="javascript:;" class="avatar avatar-xs rounded-circle"
-                                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                                        title="Jessica Doe">
-                                                        <img src="{{ asset('assets') }}/img/team-4.jpg" alt="team4">
-                                                    </a>
-                                                </div>
-                                            </td>
-                                            <td class="align-middle text-center text-sm">
-                                                <span class="text-xs font-weight-bold"> $14,000 </span>
-                                            </td>
-                                            <td class="align-middle">
-                                                <div class="progress-wrapper w-75 mx-auto">
-                                                    <div class="progress-info">
-                                                        <div class="progress-percentage">
-                                                            <span class="text-xs font-weight-bold">60%</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="progress">
-                                                        <div class="progress-bar bg-gradient-info w-60"
-                                                            role="progressbar" aria-valuenow="60" aria-valuemin="0"
-                                                            aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex px-2 py-1">
-                                                    <div>
-                                                        <img src="{{ asset('assets') }}/img/small-logos/logo-atlassian.svg"
-                                                            class="avatar avatar-sm me-3" alt="atlassian">
-                                                    </div>
-                                                    <div class="d-flex flex-column justify-content-center">
-                                                        <h6 class="mb-0 text-sm">Add Progress Track</h6>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="avatar-group mt-2">
-                                                    <a href="javascript:;" class="avatar avatar-xs rounded-circle"
-                                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                                        title="Romina Hadid">
-                                                        <img src="{{ asset('assets') }}/img/team-2.jpg" alt="team5">
-                                                    </a>
-                                                    <a href="javascript:;" class="avatar avatar-xs rounded-circle"
-                                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                                        title="Jessica Doe">
-                                                        <img src="{{ asset('assets') }}/img/team-4.jpg" alt="team6">
-                                                    </a>
-                                                </div>
-                                            </td>
-                                            <td class="align-middle text-center text-sm">
-                                                <span class="text-xs font-weight-bold"> $3,000 </span>
-                                            </td>
-                                            <td class="align-middle">
-                                                <div class="progress-wrapper w-75 mx-auto">
-                                                    <div class="progress-info">
-                                                        <div class="progress-percentage">
-                                                            <span class="text-xs font-weight-bold">10%</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="progress">
-                                                        <div class="progress-bar bg-gradient-info w-10"
-                                                            role="progressbar" aria-valuenow="10" aria-valuemin="0"
-                                                            aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex px-2 py-1">
-                                                    <div>
-                                                        <img src="{{ asset('assets') }}/img/small-logos/logo-slack.svg"
-                                                            class="avatar avatar-sm me-3" alt="team7">
-                                                    </div>
-                                                    <div class="d-flex flex-column justify-content-center">
-                                                        <h6 class="mb-0 text-sm">Fix Platform Errors</h6>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="avatar-group mt-2">
-                                                    <a href="javascript:;" class="avatar avatar-xs rounded-circle"
-                                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                                        title="Romina Hadid">
-                                                        <img src="{{ asset('assets') }}/img/team-3.jpg" alt="team8">
-                                                    </a>
-                                                    <a href="javascript:;" class="avatar avatar-xs rounded-circle"
-                                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                                        title="Jessica Doe">
-                                                        <img src="{{ asset('assets') }}/img/team-1.jpg" alt="team9">
-                                                    </a>
-                                                </div>
-                                            </td>
-                                            <td class="align-middle text-center text-sm">
-                                                <span class="text-xs font-weight-bold"> Not set </span>
-                                            </td>
-                                            <td class="align-middle">
-                                                <div class="progress-wrapper w-75 mx-auto">
-                                                    <div class="progress-info">
-                                                        <div class="progress-percentage">
-                                                            <span class="text-xs font-weight-bold">100%</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="progress">
-                                                        <div class="progress-bar bg-gradient-success w-100"
-                                                            role="progressbar" aria-valuenow="100" aria-valuemin="0"
-                                                            aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex px-2 py-1">
-                                                    <div>
-                                                        <img src="{{ asset('assets') }}/img/small-logos/logo-spotify.svg"
-                                                            class="avatar avatar-sm me-3" alt="spotify">
-                                                    </div>
-                                                    <div class="d-flex flex-column justify-content-center">
-                                                        <h6 class="mb-0 text-sm">Launch our Mobile App</h6>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="avatar-group mt-2">
-                                                    <a href="javascript:;" class="avatar avatar-xs rounded-circle"
-                                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                                        title="Ryan Tompson">
-                                                        <img src="{{ asset('assets') }}/img/team-4.jpg" alt="user1">
-                                                    </a>
-                                                    <a href="javascript:;" class="avatar avatar-xs rounded-circle"
-                                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                                        title="Romina Hadid">
-                                                        <img src="{{ asset('assets') }}/img/team-3.jpg" alt="user2">
-                                                    </a>
-                                                    <a href="javascript:;" class="avatar avatar-xs rounded-circle"
-                                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                                        title="Alexander Smith">
-                                                        <img src="{{ asset('assets') }}/img/team-4.jpg" alt="user3">
-                                                    </a>
-                                                    <a href="javascript:;" class="avatar avatar-xs rounded-circle"
-                                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                                        title="Jessica Doe">
-                                                        <img src="{{ asset('assets') }}/img/team-1.jpg" alt="user4">
-                                                    </a>
-                                                </div>
-                                            </td>
-                                            <td class="align-middle text-center text-sm">
-                                                <span class="text-xs font-weight-bold"> $20,500 </span>
-                                            </td>
-                                            <td class="align-middle">
-                                                <div class="progress-wrapper w-75 mx-auto">
-                                                    <div class="progress-info">
-                                                        <div class="progress-percentage">
-                                                            <span class="text-xs font-weight-bold">100%</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="progress">
-                                                        <div class="progress-bar bg-gradient-success w-100"
-                                                            role="progressbar" aria-valuenow="100" aria-valuemin="0"
-                                                            aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex px-2 py-1">
-                                                    <div>
-                                                        <img src="{{ asset('assets') }}/img/small-logos/logo-jira.svg"
-                                                            class="avatar avatar-sm me-3" alt="jira">
-                                                    </div>
-                                                    <div class="d-flex flex-column justify-content-center">
-                                                        <h6 class="mb-0 text-sm">Add the New Pricing Page</h6>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="avatar-group mt-2">
-                                                    <a href="javascript:;" class="avatar avatar-xs rounded-circle"
-                                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                                        title="Ryan Tompson">
-                                                        <img src="{{ asset('assets') }}/img/team-4.jpg" alt="user5">
-                                                    </a>
-                                                </div>
-                                            </td>
-                                            <td class="align-middle text-center text-sm">
-                                                <span class="text-xs font-weight-bold"> $500 </span>
-                                            </td>
-                                            <td class="align-middle">
-                                                <div class="progress-wrapper w-75 mx-auto">
-                                                    <div class="progress-info">
-                                                        <div class="progress-percentage">
-                                                            <span class="text-xs font-weight-bold">25%</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="progress">
-                                                        <div class="progress-bar bg-gradient-info w-25"
-                                                            role="progressbar" aria-valuenow="25" aria-valuemin="0"
-                                                            aria-valuemax="25"></div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex px-2 py-1">
-                                                    <div>
-                                                        <img src="{{ asset('assets') }}/img/small-logos/logo-invision.svg"
-                                                            class="avatar avatar-sm me-3" alt="invision">
-                                                    </div>
-                                                    <div class="d-flex flex-column justify-content-center">
-                                                        <h6 class="mb-0 text-sm">Redesign New Online Shop</h6>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="avatar-group mt-2">
-                                                    <a href="javascript:;" class="avatar avatar-xs rounded-circle"
-                                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                                        title="Ryan Tompson">
-                                                        <img src="{{ asset('assets') }}/img/team-1.jpg" alt="user6">
-                                                    </a>
-                                                    <a href="javascript:;" class="avatar avatar-xs rounded-circle"
-                                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                                        title="Jessica Doe">
-                                                        <img src="{{ asset('assets') }}/img/team-4.jpg" alt="user7">
-                                                    </a>
-                                                </div>
-                                            </td>
-                                            <td class="align-middle text-center text-sm">
-                                                <span class="text-xs font-weight-bold"> $2,000 </span>
-                                            </td>
-                                            <td class="align-middle">
-                                                <div class="progress-wrapper w-75 mx-auto">
-                                                    <div class="progress-info">
-                                                        <div class="progress-percentage">
-                                                            <span class="text-xs font-weight-bold">40%</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="progress">
-                                                        <div class="progress-bar bg-gradient-info w-40"
-                                                            role="progressbar" aria-valuenow="40" aria-valuemin="0"
-                                                            aria-valuemax="40"></div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100">
-                        <div class="card-header pb-0">
-                            <h6>Orders overview</h6>
-                            <p class="text-sm">
-                                <i class="fa fa-arrow-up text-success" aria-hidden="true"></i>
-                                <span class="font-weight-bold">24%</span> this month
-                            </p>
-                        </div>
-                        <div class="card-body p-3">
-                            <div class="timeline timeline-one-side">
-                                <div class="timeline-block mb-3">
-                                    <span class="timeline-step">
-                                        <i class="material-icons text-success text-gradient">notifications</i>
-                                    </span>
-                                    <div class="timeline-content">
-                                        <h6 class="text-dark text-sm font-weight-bold mb-0">$2400, Design changes
-                                        </h6>
-                                        <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">22 DEC 7:20 PM
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="timeline-block mb-3">
-                                    <span class="timeline-step">
-                                        <i class="material-icons text-danger text-gradient">code</i>
-                                    </span>
-                                    <div class="timeline-content">
-                                        <h6 class="text-dark text-sm font-weight-bold mb-0">New order #1832412</h6>
-                                        <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">21 DEC 11 PM
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="timeline-block mb-3">
-                                    <span class="timeline-step">
-                                        <i class="material-icons text-info text-gradient">shopping_cart</i>
-                                    </span>
-                                    <div class="timeline-content">
-                                        <h6 class="text-dark text-sm font-weight-bold mb-0">Server payments for
-                                            April</h6>
-                                        <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">21 DEC 9:34 PM
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="timeline-block mb-3">
-                                    <span class="timeline-step">
-                                        <i class="material-icons text-warning text-gradient">credit_card</i>
-                                    </span>
-                                    <div class="timeline-content">
-                                        <h6 class="text-dark text-sm font-weight-bold mb-0">New card added for order
-                                            #4395133</h6>
-                                        <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">20 DEC 2:20 AM
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="timeline-block mb-3">
-                                    <span class="timeline-step">
-                                        <i class="material-icons text-primary text-gradient">key</i>
-                                    </span>
-                                    <div class="timeline-content">
-                                        <h6 class="text-dark text-sm font-weight-bold mb-0">Unlock packages for
-                                            development</h6>
-                                        <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">18 DEC 4:54 AM
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="timeline-block">
-                                    <span class="timeline-step">
-                                        <i class="material-icons text-dark text-gradient">payments</i>
-                                    </span>
-                                    <div class="timeline-content">
-                                        <h6 class="text-dark text-sm font-weight-bold mb-0">New order #9583120</h6>
-                                        <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">17 DEC</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <x-footers.auth></x-footers.auth>
-        </div> -->
+    
     </main>
     </div>
    
@@ -863,133 +294,105 @@
   </symbol>
 </svg>
 
-<!-- <header class="navbar sticky-top bg-dark flex-md-nowrap p-0 shadow" data-bs-theme="dark">
-  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-white" href="#">Company name</a>
 
-  <ul class="navbar-nav flex-row d-md-none">
-                @auth
-                    <li class="nav-item">
-                        <span class="nav-link text-white">{{ Auth::user()->name }}</span>
-                    </li>
-                @endauth
-            <li class="nav-item text-nowrap">
-      <button class="nav-link px-3 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSearch" aria-controls="navbarSearch" aria-expanded="false" aria-label="Toggle search">
-        <svg class="bi"><use xlink:href="#search"/></svg>
-      </button>
-    </li>
-    <li class="nav-item text-nowrap">
-      <button class="nav-link px-3 text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-        <svg class="bi"><use xlink:href="#list"/></svg>
-      </button>
-    </li>
-  </ul>
- 
-  <div id="navbarSearch" class="navbar-search w-100 collapse">
-    <input class="form-control w-100 rounded-0 border-0" type="text" placeholder="Search" aria-label="Search">
-  </div>
-</header> -->
-
-<div class="container-fluid">
-  <div class="row">
-    <div class="sidebar border border-right col-md-3 col-lg-2 p-0 bg-body-tertiary">
-      <div class="offcanvas-md offcanvas-end bg-body-tertiary" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="sidebarMenuLabel">Company name</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#">
-                <svg class="bi"><use xlink:href="#house-fill"/></svg>
-                Dashboard
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#">
-                <svg class="bi"><use xlink:href="#file-earmark"/></svg>
-                services
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#">
-                <svg class="bi"><use xlink:href="#chat"/></svg>
-                Chat
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#">
-                <svg class="bi"><use xlink:href="#people"/></svg>
-                Localisation
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#">
-                <svg class="bi"><use xlink:href="#graph-up"/></svg>
-                Reports
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#">
-                <svg class="bi"><use xlink:href="#puzzle"/></svg>
-                Integrations
-              </a>
-            </li>
-          </ul>
-
-          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-body-secondary text-uppercase">
-            <span>Saved reports</span>
-            <a class="link-secondary" href="#" aria-label="Add a new report">
-              <svg class="bi"><use xlink:href="#plus-circle"/></svg>
-            </a>
-          </h6>
-          <ul class="nav flex-column mb-auto">
-            <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#">
-                <svg class="bi"><use xlink:href="#file-earmark-text"/></svg>
-                Current month
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#">
-                <svg class="bi"><use xlink:href="#file-earmark-text"/></svg>
-                Last quarter
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#">
-                <svg class="bi"><use xlink:href="#file-earmark-text"/></svg>
-                Social engagement
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#">
-                <svg class="bi"><use xlink:href="#file-earmark-text"/></svg>
-                Year-end sale
-              </a>
-            </li>
-          </ul>
-
-          <hr class="my-3">
-
-          <ul class="nav flex-column mb-auto">
-            <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#">
-                <svg class="bi"><use xlink:href="#gear-wide-connected"/></svg>
-                Settings
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-              <svg class="bi"><use xlink:href="#door-closed"/></svg>
-              {{ __('Logout') }}
-                                    </a>
-              
-            </li>
-          </ul>
-        </div>
-      </div>
+<div class="container-fluid ">
+  <div class="row ">
+   <div class="sidebar border border-right col-md-3 col-lg-2 p-0 bg-body-tertiary " style="height:100vh">
+  <div class="offcanvas-md offcanvas-end bg-body-tertiary " tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="sidebarMenuLabel">Company name</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu" aria-label="Close"></button>
     </div>
+    <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3" style="overflow-y: auto;">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link d-flex align-items-center gap-2 active" href="{{ route('dashboard') }}" class=" aria-current="page" href="#">
+            <svg class="bi"><use xlink:href="#house-fill"/></svg>
+            Dashboard
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex align-items-center gap-2" href="{{ route('services') }}" class="">
+          <svg class="bi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M48 448V64c0-8.8 7.2-16 16-16H224v80c0 17.7 14.3 32 32 32h80V448c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16zM64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V154.5c0-17-6.7-33.3-18.7-45.3L274.7 18.7C262.7 6.7 246.5 0 229.5 0H64zM96 96c-8.8 0-16 7.2-16 16s7.2 16 16 16h80c8.8 0 16-7.2 16-16s-7.2-16-16-16H96zm0 64c-8.8 0-16 7.2-16 16s7.2 16 16 16h80c8.8 0 16-7.2 16-16s-7.2-16-16-16H96zm54.2 221.8L160 349l16.7 55.6c1.9 6.3 7.4 10.8 13.9 11.3s12.8-2.9 15.7-8.8l10.6-21.3c.6-1.2 1.8-1.9 3.1-1.9s2.5 .7 3.1 1.9l10.6 21.3c2.7 5.4 8.3 8.8 14.3 8.8h40c8.8 0 16-7.2 16-16s-7.2-16-16-16H257.9l-6.2-12.4c-6-12-18.3-19.6-31.7-19.6c-8.6 0-16.8 3.1-23.1 8.6l-11.3-37.5C182.2 311.7 171.8 304 160 304s-22.2 7.7-25.6 19.1l-14.9 49.5c-2 6.8-8.3 11.4-15.3 11.4H96c-8.8 0-16 7.2-16 16s7.2 16 16 16h8.2c21.2 0 39.9-13.9 46-34.2z"/></svg>            Services
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex align-items-center gap-2" href="#">
+          <svg class="bi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M128 0C110.3 0 96 14.3 96 32V224h96V192c0-35.3 28.7-64 64-64H480V32c0-17.7-14.3-32-32-32H128zM256 160c-17.7 0-32 14.3-32 32v32h96c35.3 0 64 28.7 64 64V416H576c17.7 0 32-14.3 32-32V192c0-17.7-14.3-32-32-32H256zm240 64h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H496c-8.8 0-16-7.2-16-16V240c0-8.8 7.2-16 16-16zM64 256c-17.7 0-32 14.3-32 32v13L187.1 415.9c1.4 1 3.1 1.6 4.9 1.6s3.5-.6 4.9-1.6L352 301V288c0-17.7-14.3-32-32-32H64zm288 84.8L216 441.6c-6.9 5.1-15.3 7.9-24 7.9s-17-2.8-24-7.9L32 340.8V480c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V340.8z"/></svg>            Chat
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex align-items-center gap-2" href="#" class=">
+          <svg class="bi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>                      Localisation
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex align-items-center gap-2" href="#">
+            <svg class="bi"><use xlink:href="#graph-up"/></svg>
+            Reports
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex align-items-center gap-2" href="#">
+            <svg class="bi"><use xlink:href="#puzzle"/></svg>
+            Integrations
+          </a>
+        </li>
+      </ul>
+
+      <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-body-secondary text-uppercase">
+        <span>Saved reports</span>
+        <a class="link-secondary" href="#" aria-label="Add a new report">
+          <svg class="bi"><use xlink:href="#plus-circle"/></svg>
+        </a>
+      </h6>
+      <ul class="nav flex-column mb-auto">
+        <li class="nav-item">
+          <a class="nav-link d-flex align-items-center gap-2" href="#">
+            <svg class="bi"><use xlink:href="#file-earmark-text"/></svg>
+            Current month
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex align-items-center gap-2" href="#">
+            <svg class="bi"><use xlink:href="#file-earmark-text"/></svg>
+            Last quarter
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex align-items-center gap-2" href="#">
+            <svg class="bi"><use xlink:href="#file-earmark-text"/></svg>
+            Social engagement
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex align-items-center gap-2" href="#">
+            <svg class="bi"><use xlink:href="#file-earmark-text"/></svg>
+            Year-end sale
+          </a>
+        </li>
+      </ul>
+
+      <hr class="my-3">
+
+      <ul class="nav flex-column mb-auto">
+        <li class="nav-item">
+          <a class="nav-link d-flex align-items-center gap-2" href="#">
+            <svg class="bi"><use xlink:href="#gear-wide-connected"/></svg>
+            Settings
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex align-items-center gap-2" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+            <svg class="bi"><use xlink:href="#door-closed"/></svg>
+            {{ __('Logout') }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
   
@@ -1021,7 +424,7 @@
             
     </div>
 
-    <div class="container bg-primary text-white">
+    <div class="container bg-primary text-white mt-5">
 <marquee behavior="" direction="left">Lorem ipsum <span style="color:red"> <b>dolor sit</b></span>, amet consectetur adipisicing elit. Nisi error repellat quo, neque in esse consectetur omnis voluptatibus sint possimus, obcaecati eius? Vitae ipsum neque similique accusamus in nisi aspernatur!</marquee>
 </div>
     </main>

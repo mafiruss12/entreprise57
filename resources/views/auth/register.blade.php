@@ -46,7 +46,7 @@
     <div class="container">
         <div class="signin-content">
             <div class="signin-image">
-                <figure><img src="images/signin-image.jpg" alt="sing up image"></figure>
+                <figure><img src="images/signup-image.jpg" alt="sing up image"></figure>
                 <a href="{{ route('login') }}" class="signup-image-link">Se Connecter</a>
             </div>
 
@@ -117,7 +117,12 @@
                                     </span>
                                 @enderror
                                 </div>
-          
+                <div class="form-group">
+        <input id="photo" type="file" name="photo" accept="image/*">
+        @error('photo')
+            <span>{{ $message }}</span>
+        @enderror
+                </div>
 
                         <div class="row mb-0">
                           <center>   <div class="col-md-12">

@@ -1,3 +1,4 @@
+@include('dashboard.index')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +8,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="container mt-5">
+@section('content')
+ <div class="container mt-5">
         <h1>Liste des Services Demandés</h1>
         <div class="row">
             @foreach($serviceRequests as $request)

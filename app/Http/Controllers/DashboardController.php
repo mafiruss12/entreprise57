@@ -10,6 +10,7 @@ class DashboardController extends Controller
     //
     public function index()
     {
+
         // Récupérer tous les utilisateurs de type client
         $artisans = User::where('role', 'artisan')->get();
 

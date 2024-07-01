@@ -3,12 +3,10 @@
 @section('content')
 <div class="container">
     <h1>Profil de {{ $user->name }}</h1>
-    <!-- Affichage des informations du profil -->
     <p>Email: {{ $user->email }}</p>
-    <p>Nom: {{ $user->name }}</p>
-    <!-- Autres informations du profil -->
-
-    <!-- Bouton Modifier le profil -->
+    @if($user->photo)
+        <img src="{{ asset('storage/' . $user->photo) }}" alt="Photo de profil" style="width:150px; height:150px; border-radius:50%;">
+    @endif
     <a href="{{ route('profile.edit') }}" class="btn btn-primary">Modifier le profil</a>
 </div>
 @endsection
