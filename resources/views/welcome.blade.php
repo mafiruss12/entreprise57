@@ -21,56 +21,29 @@
         </style>
     </head>
     <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-         @if (Route::has('login'))
-                <div class="hidden fixed top-4  px-6 py-4 sm:block">
+       
+        <!DOCTYPE html>
+        <div class="content">
+        <div class="container justify-content align-item  " style="margin-top:50px" >
+        <center>      <img src="images/aa.png" alt="" class="w-50 rounded mb-3">
+         <h1>Bienvenue sur notre plateforme</h1>
+            <p>Veuillez vous connecter ou vous inscrire pour accéder aux services.</p>
+            @if (Route::has('login'))
+                <div class="hidden  top-4  px-6 py-4 sm:block">
                     @auth
                         <a href="{{ route('dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 ">Home</a>
                     @else
-                        <a href="{{ route('login') }}"><div  class="text-sm  btn btn-primary ">Log in</div></a>
+                        <a href="{{ route('login') }}"><div  class="text-sm  btn btn-primary ">Connexion</div></a>
 
                         @if (Route::has('register'))
-                         <a href="{{ route('register') }}">   <div  class=" text-sm btn btn-primary">Register</div></a>
+                         <a href="{{ route('register') }}">   <div  class=" text-sm btn btn-secondary">Inscription</div></a>
                         @endif
                     @endauth
                 </div>
-            @endif
+            @endif</center> 
         </div>
-        <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</head>
-<body>
-    <div class="container mt-5">
-        <h1>Liste des Clients</h1>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Nom</th>
-                    <th>Email</th>
-                    <th>Téléphone</th>
-                    <th>Adresse</th>
-                    <th>Ville</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach($artisans as $artisan)
-                    <tr>
-                        <td>{{ $artisan->id }}</td>
-                        <td>{{ $artisan->name }}</td>
-                        <td>{{ $artisan->email }}</td>
-                        <td>{{ $artisan->phone }}</td>
-                        <td>{{ $artisan->address }}</td>
-                        <td>{{ $artisan->city }}</td>
-                    </tr>
-                @endforeach
-            </tbody>
-        </table>
+    </div>
+
     </div>
 </body>
 </html>

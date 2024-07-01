@@ -21,3 +21,6 @@
     </div>
 </div>
 @endsection
+<main>
+            @yield('content')
+        </main>
