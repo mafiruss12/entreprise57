@@ -5,6 +5,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- Ajoutez jQuery pour faciliter la mise en œuvre de votre question -->
     <link rel="stylesheet" href="/bootstrap-5.3.3-dist/css/bootstrap.css">
+    <link rel="icon" type="image/jpg" href="images/logo.jpg">
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -411,21 +412,19 @@
                                 <p class="text-sm mb-0 text-capitalize">5555</p>
                                 <h4 class="mb-0">$53k</h4>
                             </div>
-                        </div>
+                          </div>
                         <hr class="dark horizontal my-0">
                         <div class="card-footer p-3">
                             <p class="mb-0"><span class="text-success text-sm font-weight-bolder">+55% </span>than
                                 lask week</p>
                         </div>
+                        
                     </div>
-               
-</table> <div class="container bg-primary text-white mt-5">
+                  </div> 
+            <div class="container bg-primary text-white mt-5">
 <marquee behavior="" direction="left">Lorem ipsum <span style="color:red"> <b>dolor sit</b></span>, amet consectetur adipisicing elit. Nisi error repellat quo, neque in esse consectetur omnis voluptatibus sint possimus, obcaecati eius? Vitae ipsum neque similique accusamus in nisi aspernatur!</marquee>
 </div>
-            </div>
-            <div class="mt-5"style="width:100%">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15890.646633210297!2d-4.079595959654543!3d5.315366530169723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1ea0a80d1c99f%3A0xf66855c5aad3bc3f!2sYopougon%20Kout%C3%A9%2C%20Abidjan!5e0!3m2!1sfr!2sci!4v1719834438725!5m2!1sfr!2sci" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
+           
 </div>
    
     </main>

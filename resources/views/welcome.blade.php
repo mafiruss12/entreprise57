@@ -19,6 +19,8 @@
                 font-family: 'Nunito', sans-serif;
             }
         </style>
+          <link rel="icon" type="image/jpg" href="images/logo.jpg">
+
     </head>
     <body class="antialiased">
        
@@ -27,19 +29,25 @@
         <div class="container justify-content align-item  " style="margin-top:50px" >
         <center>      <img src="images/aa.png" alt="" class="w-50 rounded mb-3">
          <h1>Bienvenue sur notre plateforme</h1>
-            <p>Veuillez vous connecter ou vous inscrire pour accéder aux services.</p>
+       
             @if (Route::has('login'))
-                <div class="hidden  top-4  px-6 py-4 sm:block">
                     @auth
-                        <a href="{{ route('dashboard') }}" class="text-sm btn btn-outline-primary">Home</a>
+                    <p>Vous êtes déjà connecter cliquez sur Home pour accéder aux services.</p> 
+                    <div class="hidden  top-4  px-6 py-4 sm:block">
+                    <a href="{{ route('dashboard') }}" class="text-sm btn btn-outline-primary">Home</a>
                     @else
-                        <a href="{{ route('login') }}"><div  class="text-sm  btn btn-primary ">Connexion</div></a>
+                    </div>
+              <center>    <p>Veuillez vous connecter ou vous inscrire pour accéder aux services.</p>
+                    <div class="hidden  top-4  px-6 py-4 sm:block">
+                    <a href="{{ route('login') }}"><div  class="text-sm  btn btn-primary ">Connexion</div></a>
 
                         @if (Route::has('register'))
-                         <a href="{{ route('register') }}">   <div  class=" text-sm btn btn-secondary">Inscription</div></a>
+                         <a href="{{ route('register') }}"> 
+                              <div  class=" text-sm btn btn-secondary">Inscription</div></a>
                         @endif
+                        </div></center>  
+
                     @endauth
-                </div>
             @endif</center> 
         </div>
     </div>

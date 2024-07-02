@@ -12,7 +12,8 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.122.0">
-    <title>Dashboard -Entreprise57</title>
+    <title>Profil</title>
+    <link rel="icon" type="image/jpg" href="images/logo.jpg">
 
 
 
@@ -318,8 +319,9 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link d-flex align-items-center gap-2" href="#">
-          <svg class="bi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M128 0C110.3 0 96 14.3 96 32V224h96V192c0-35.3 28.7-64 64-64H480V32c0-17.7-14.3-32-32-32H128zM256 160c-17.7 0-32 14.3-32 32v32h96c35.3 0 64 28.7 64 64V416H576c17.7 0 32-14.3 32-32V192c0-17.7-14.3-32-32-32H256zm240 64h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H496c-8.8 0-16-7.2-16-16V240c0-8.8 7.2-16 16-16zM64 256c-17.7 0-32 14.3-32 32v13L187.1 415.9c1.4 1 3.1 1.6 4.9 1.6s3.5-.6 4.9-1.6L352 301V288c0-17.7-14.3-32-32-32H64zm288 84.8L216 441.6c-6.9 5.1-15.3 7.9-24 7.9s-17-2.8-24-7.9L32 340.8V480c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V340.8z"/></svg>            Chat
+          <a class="nav-link d-flex align-items-center gap-2" href="http://127.0.0.1:8000/chat">
+          <svg class="bi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M128 0C110.3 0 96 14.3 96 32V224h96V192c0-35.3 28.7-64 64-64H480V32c0-17.7-14.3-32-32-32H128zM256 160c-17.7 0-32 14.3-32 32v32h96c35.3 0 64 28.7 64 64V416H576c17.7 0 32-14.3 32-32V192c0-17.7-14.3-32-32-32H256zm240 64h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H496c-8.8 0-16-7.2-16-16V240c0-8.8 7.2-16 16-16zM64 256c-17.7 0-32 14.3-32 32v13L187.1 415.9c1.4 1 3.1 1.6 4.9 1.6s3.5-.6 4.9-1.6L352 301V288c0-17.7-14.3-32-32-32H64zm288 84.8L216 441.6c-6.9 5.1-15.3 7.9-24 7.9s-17-2.8-24-7.9L32 340.8V480c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V340.8z"/></svg>
+                      Chat
           </a>
         </li>
         <li class="nav-item">
@@ -563,8 +565,8 @@ background-color:#f1f5f9;
     <div class="col-xl-12 col-lg-12 col-md-12 col-12">
       <!-- Bg -->
       <div class="pt-20 rounded-top" style="background:
-        url(https://bootdey.com/image/480x480/00FFFF/000000) no-repeat;
-        background-size: cover;">
+        url(images/th.png) no-repeat;
+        background-size: cover;height:50vh">
       </div>
       <div class="card rounded-bottom smooth-shadow-sm">
         <div class="d-flex align-items-center justify-content-between
@@ -577,29 +579,69 @@ background-color:#f1f5f9;
               rounded-circle border border-2 " alt="Image">
             </div>
             <div class="lh-1">
-              <h2 class="mb-0">Jitu Chauhan
-                <a href="#!" class="text-decoration-none">
-
-                </a>
-              </h2>
-              <p class="mb-0 d-block">@imjituchauhan</p>
+              <h2 class="mb-0"> {{ Auth::user()->name }}
+             
+              </h2>   <a href="#!" class="text-decoration-none">
+                
+              <p class="mb-0 d-block">{{ Auth::user()->email }}</p>
             </div>
           </div>
           <div>
-            <a href="#" class="btn btn-outline-primary
+            <a href="{{ route('profile.edit') }}"  class="btn btn-outline-primary
               d-none d-md-block">Edit Profile</a>
           </div>
         </div>
-        <ul class="nav nav-lt-tab px-4" id="pills-tab" role="tablist">
+        <div class="container">
+    <ul class="nav nav-lt-tab px-4" id="pills-tab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">
+                <div style="display: flex; align-items: center;">
+                    @foreach($services as $service)
+                        <div class="btn btn-primary btn-sm mx-1">{{ $service->title }}</div>
+                    @endforeach
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
 
-          <li class="nav-item">
-            <a class="nav-link active" href="#"> Followers </a>
-          </li>
-     
-        </ul>
+
+
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <!-- resources/views/services_all.blade.php -->
+
+<div class="container">
+    <h1>Mes Services</h1>
+    <ul>
+        @foreach($services as $service)
+            <li>{{ $service->name }} - {{ $service->description }}</li>
+        @endforeach
+    </ul>
+</div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
+</div>
+<<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
   <div class="py-6">
     <div class="row">
       <div class="col-lg-4 col-12">
@@ -902,3 +944,52 @@ background-color:#f1f5f9;
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js" integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous"></script><script src="bootstrap-5.3.3-dist/js/dashboard.js"></script>
 </body>
 </html>
+@extends('layouts.app')
+
+@section('content')
+    <div class="container">
+        <h1>Profil de {{ Auth::user()->name }}</h1>
+        <p>Email:{{ Auth::user()->email }}</p>
+
+        <h2>Services</h2>
+        @if($services->isEmpty())
+            <p>Aucun service trouvé.</p>
+        @else
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nom du Service</th>
+                        <th>Description</th>
+                        <th>Date de Création</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach($services as $service)
+                        <tr>
+                            <td>{{ $service->id }}</td>
+                            <td>{{ $service->name }}</td>
+                            <td>{{ $service->description }}</td>
+                            <td>{{ $service->created_at }}</td>
+                            <td>{{ $service->user_id }}</td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        @endif
+
+        <h2>Ajouter un Service</h2>
+        <form action="{{ route('services') }}" method="POST">
+            @csrf
+            <div class="form-group">
+                <label for="name">Nom du Service</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea class="form-control" id="description" name="description" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Ajouter</button>
+        </form>
+    </div>
+@endsection

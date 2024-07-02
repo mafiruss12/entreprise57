@@ -13,6 +13,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="/bootstrap-5.3.3-dist/css/bootstrap.css" rel="stylesheet">
+    <link rel="icon" type="image/jpg" href="images/logo.jpg">
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])

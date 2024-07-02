@@ -12,9 +12,7 @@ class DashboardController extends Controller
     {
 
         // Récupérer tous les utilisateurs de type client
-        $artisans = User::where('role', 'artisan')->get();
-
         // Retourner la vue avec la liste des clients
-        return view('welcome', compact('artisans'));
+        return view('dashboard.index');
     }
 }

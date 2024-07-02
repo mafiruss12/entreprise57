@@ -18,7 +18,9 @@ return new class extends Migration
             $table->string('title');
             $table->text('description')->nullable();
             $table->timestamps();
-        });
+            $table->unsignedBigInteger('user_id')->after('id'); // Ajoute la colonne user_id après la colonne id
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade'); // Ajoute la clé étrangère
+            });
         
     }
 

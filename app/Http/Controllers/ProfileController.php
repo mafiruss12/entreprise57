@@ -10,8 +10,9 @@ class ProfileController extends Controller
     public function show()
     {
         $user = Auth::user();
-        return view('profile.show', compact('user'));
-    }
+        $services = $user->services; // Récupère les services de l'utilisateur
+        
+        return view('pages.profile', compact('user', 'services'));}
 
     public function edit()
     {

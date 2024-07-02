@@ -17,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'role','photo'
+        'name', 'email', 'password','photo'
     ];
 
     /**
@@ -48,12 +48,11 @@ class User extends Authenticatable
         return $this->role === 'artisan';
     }
 
+
+
     public function services()
     {
-        if ($this->isArtisan()) {
-            return $this->hasMany(Service::class, 'artisan_id');
-        }
-        return null;
+        return $this->hasMany(Service::class);
     }
 
     public function serviceRequests()

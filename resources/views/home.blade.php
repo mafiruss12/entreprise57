@@ -1,6 +1,14 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/jpg" href="images/logo.jpg">
+    </head>
+<body>
+    
 
-@section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -20,7 +28,6 @@
         </div>
     </div>
 </div>
-@endsection
 <main>
-            @yield('content')
-        </main>
+        </main></body>
+</html>

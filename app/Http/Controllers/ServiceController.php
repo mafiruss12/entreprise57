@@ -2,23 +2,42 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\ServiceRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Service;
 
 class ServiceController extends Controller
 {
     public function index()
     {
-        // Récupérer l'ID du client connecté
-        $clientId = Auth::id();
+        $user = Auth::user();
+        $services = $user->services;
 
-        // Récupérer les services demandés par le client connecté
-        $serviceRequests = ServiceRequest::where('client_id', $clientId)
-        ->with(['artisan', 'client', 'service'])
-        ->get();
+        return view('services', compact('user', 'services'));
+    }
+    
+    public function allServices()
+    {
+        $user = Auth::user();
+        $services = $user->services;
 
-        // Retourner la vue avec la liste des services
-        return view('services', compact('serviceRequests'));
+        return response()->json(['services' => $services]);
+    }
+    public function store(Request $request)
+    {
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'description' => 'required|string|max:255',
+        ]);
+
+        $user = Auth::user();
+
+        $service = new Service;
+        $service->title = $request->title;
+        $service->description = $request->description;
+        $service->user_id = $user->id; // Assigner le service à l'utilisateur connecté
+        $service->save();
+
+        return redirect()->route('services')->with('success', 'Service ajouté avec succès');
     }
 }

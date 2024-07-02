@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/bootstrap-5.3.3-dist/css/bootstrap.css">
-</head>
+    <link rel="icon" type="image/jpg" href="images/logo.jpg">
+    </head>
 <body>
     
 
@@ -80,19 +81,19 @@
             </span>
         @enderror
                         </div>
-                        <div class="form-group">
-
-                        <input id="specialty" type="text" class="form-control @error('specialty') is-invalid @enderror " name="specialty" value="{{ old('specialty') }}" required autocomplete="specialty" placeholder="specialty">
-        @error('specialty')
-            <span class="invalid-feedback" role="alert">
-                <strong>{{ $message }}</strong>
-            </span>
-        @enderror
-</div>
+                   
                         <div class="form-group">
                         <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="password_confirmation">
                         </div>
+                        <div class="form-group">
 
+<input id="specialty" type="text" class="form-control @error('specialty') is-invalid @enderror " name="specialty" value="{{ old('specialty') }}" required autocomplete="specialty" placeholder="specialty">
+@error('specialty')
+<span class="invalid-feedback" role="alert">
+<strong>{{ $message }}</strong>
+</span>
+@enderror
+</div>
                         <div class="form-group">
 
         <input id="location" type="text" class="form-control @error('location') is-invalid @enderror " name="location" value="{{ old('location') }}" required autocomplete="location" placeholder="location">
@@ -103,26 +104,6 @@
         @enderror
                                 
                         </div>
-                       
-<div class="form-group">
-
-                         <select id="role" class="form-control @error('role') is-invalid @enderror" name="role" required>
-                                    <option value="">Sélectionner un rôle</option>
-                                    <option value="artisan" @if(old('role') == 'artisan') selected @endif>Artisan</option>
-                                    <option value="client" @if(old('role') == 'client') selected @endif>Client</option>
-                                </select>
-                                @error('role')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                                </div>
-                <div class="form-group">
-        <input id="photo" type="file" name="photo" accept="image/*">
-        @error('photo')
-            <span>{{ $message }}</span>
-        @enderror
-                </div>
 
                         <div class="row mb-0">
                           <center>   <div class="col-md-12">
