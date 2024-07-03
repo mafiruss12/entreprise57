@@ -306,7 +306,7 @@
     </div>
     <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3" style="overflow-y: auto;">
       <ul class="nav flex-column">
-        <li class="nav-item">
+        <li class="nav-item" style="background: gainsboro;border-radius:5px">
           <a class="nav-link d-flex align-items-center gap-2 active" href="{{ route('dashboard') }}" class=" aria-current="page" href="#">
             <svg class="bi"><use xlink:href="#house-fill"/></svg>
             Dashboard
@@ -318,8 +318,9 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link d-flex align-items-center gap-2" href="#">
-          <svg class="bi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M128 0C110.3 0 96 14.3 96 32V224h96V192c0-35.3 28.7-64 64-64H480V32c0-17.7-14.3-32-32-32H128zM256 160c-17.7 0-32 14.3-32 32v32h96c35.3 0 64 28.7 64 64V416H576c17.7 0 32-14.3 32-32V192c0-17.7-14.3-32-32-32H256zm240 64h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H496c-8.8 0-16-7.2-16-16V240c0-8.8 7.2-16 16-16zM64 256c-17.7 0-32 14.3-32 32v13L187.1 415.9c1.4 1 3.1 1.6 4.9 1.6s3.5-.6 4.9-1.6L352 301V288c0-17.7-14.3-32-32-32H64zm288 84.8L216 441.6c-6.9 5.1-15.3 7.9-24 7.9s-17-2.8-24-7.9L32 340.8V480c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V340.8z"/></svg>            Chat
+        <a class="nav-link d-flex align-items-center gap-2 justify-content-between" href="{{ route('chat.index') }}">
+        <svg class="bi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M128 0C110.3 0 96 14.3 96 32V224h96V192c0-35.3 28.7-64 64-64H480V32c0-17.7-14.3-32-32-32H128zM256 160c-17.7 0-32 14.3-32 32v32h96c35.3 0 64 28.7 64 64V416H576c17.7 0 32-14.3 32-32V192c0-17.7-14.3-32-32-32H256zm240 64h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H496c-8.8 0-16-7.2-16-16V240c0-8.8 7.2-16 16-16zM64 256c-17.7 0-32 14.3-32 32v13L187.1 415.9c1.4 1 3.1 1.6 4.9 1.6s3.5-.6 4.9-1.6L352 301V288c0-17.7-14.3-32-32-32H64zm288 84.8L216 441.6c-6.9 5.1-15.3 7.9-24 7.9s-17-2.8-24-7.9L32 340.8V480c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V340.8z"/></svg>           
+           Chat<span class="badge bg-primary  ml-auto">4</span>
           </a>
         </li>
         <li class="nav-item">
@@ -378,7 +379,7 @@
 
       <ul class="nav flex-column mb-auto">
         <li class="nav-item">
-          <a class="nav-link d-flex align-items-center gap-2" href="#">
+          <a class="nav-link d-flex align-items-center gap-2" href="{{ route('profile.settings') }}">
             <svg class="bi"><use xlink:href="#gear-wide-connected"/></svg>
             Settings
           </a>
@@ -440,69 +441,7 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
-<!-- Script pour initialiser la carte et gérer la géolocalisation -->
-<script>
-    $(document).ready(function() {
-        // Vérifier si la géolocalisation est activée
-        if ("geolocation" in navigator) {
-            // La géolocalisation est disponible
-            navigator.geolocation.getCurrentPosition(function(position) {
-                // Succès : l'utilisateur a autorisé la localisation
-                console.log("Localisation activée :", position);
 
-                // Récupérer les coordonnées
-                const lat = position.coords.latitude;
-                const lon = position.coords.longitude;
-
-                // Initialiser la carte avec les coordonnées de l'utilisateur
-                const map = L.map('map').setView([lat, lon], 13);
-
-                // Ajouter une couche de tuiles (tile layer)
-                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                }).addTo(map);
-
-                // Ajouter un marqueur à la position de l'utilisateur
-                L.marker([lat, lon]).addTo(map)
-                    .bindPopup('Vous êtes ici.')
-                    .openPopup();
-
-                // Envoyer les coordonnées au serveur pour les enregistrer (facultatif)
-                $.ajax({
-                    url: '/save-location', // Changez l'URL selon votre route backend
-                    method: 'POST',
-                    data: {
-                        latitude: lat,
-                        longitude: lon,
-                        _token: '{{ csrf_token() }}' // Pour les applications Laravel
-                    },
-                    success: function(response) {
-                        console.log('Localisation enregistrée avec succès.');
-                    },
-                    error: function(error) {
-                        console.error('Erreur lors de l\'enregistrement de la localisation :', error);
-                    }
-                });
-            }, function(error) {
-                // Erreur : l'utilisateur a refusé la localisation ou une erreur est survenue
-                console.error("Erreur de géolocalisation :", error);
-                // Afficher un message ou un popup pour demander à l'utilisateur d'activer la localisation
-                if (error.code === error.PERMISSION_DENIED) {
-                    var enableLocation = confirm("Pour utiliser cette fonctionnalité, veuillez activer la localisation de votre navigateur. Cliquez sur OK pour activer.");
-                    if (enableLocation) {
-                        // Rediriger vers les paramètres de localisation
-                        window.location.href = "chrome://settings/content/location";
-                    } else {
-                        alert("Vous avez refusé l'activation de la localisation. Certaines fonctionnalités peuvent ne pas être disponibles.");
-                    }
-                }
-            });
-        } else {
-            // La géolocalisation n'est pas disponible sur ce navigateur
-            console.warn("La géolocalisation n'est pas supportée par ce navigateur.");
-        }
-    });
-</script>
 @endsection
 
 <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>

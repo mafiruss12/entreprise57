@@ -1,11 +1,19 @@
-@extends('layouts.app')
 
-@section('content')
-<div class="container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/bootstrap-5.3.3-dist/css/bootstrap.css" rel="stylesheet">
+    </head>
+<body style="background-color:#0dcaf0;">
+
+<div class="container" style="margin-top:200px">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Reset Password') }}</div>
+                <div class="card-header">{{ __('Reinitialiser Mot de passe') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -18,7 +26,7 @@
                         @csrf
 
                         <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Adresse Email') }}</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
@@ -34,7 +42,7 @@
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Send Password Reset Link') }}
+                                    {{ __('Envoyer un lien de reinitialisation') }}
                                 </button>
                             </div>
                         </div>
@@ -44,4 +52,6 @@
         </div>
     </div>
 </div>
-@endsection
+    
+</body>
+</html>

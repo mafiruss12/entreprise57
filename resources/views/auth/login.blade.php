@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Entreprise57') }}</title>
+    <title>Connexion</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
@@ -33,11 +33,11 @@
         <div class="signin-content">
             <div class="signin-image">
                 <figure><img src="images/signin-image.jpg" alt="sing up image"></figure>
-                <a href="{{ route('register') }}" class="signup-image-link">Create an account</a>
+                <a href="{{ route('register') }}" class="signup-image-link">Créez un compte</a>
             </div>
 
             <div class="signin-form">
-                <h2 class="form-title">{{ __('Login') }}</h2>
+                <h2 class="form-title">{{ __('Connexion') }}</h2>
                 <form method="POST" action="{{ route('login') }}" class="register-form">
                         @csrf
 
@@ -79,14 +79,14 @@
                         <div class="row mb-0">
                           <center>   <div class="col-md-12">
                                <button type="submit" class="btn btn-primary w-100">
-                                    {{ __('Login') }}
+                                    {{ __('Valider') }}
                                 </button>
 <br>
                                 
 
                             </div></center>@if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
+                                        {{ __('Mot de passe Oublié?') }}
                                     </a>
                                 @endif
                         </div>

@@ -25,6 +25,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/services', [ServiceController::class, 'index'])->name('services');
     Route::get('/profile', [ProfileController::class, 'show'])->name('profile.show');
     Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::get('/profile/settings', [ProfileController::class, 'settings'])->name('profile.settings');
     Route::post('/profile/update', [ProfileController::class, 'update'])->name('profile.update');
 Route::get('/messages/{user}', [MessageController::class, 'fetchMessages']);
 Route::post('/messages', [MessageController::class, 'sendMessage']);

@@ -20,10 +20,10 @@
 <body>
     <div id="app" style="position: fixed;
     width: 100%;
-    z-index: 111;">
+    z-index: 111;top: 0;">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a href="{{ url('/') }}" style="text-decoration:none;font-size:20px;color:black;">
+                <a href="{{ url('/dashboard') }}" style="text-decoration:none;font-size:20px;color:black;">
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -61,7 +61,9 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('profile.show') }}">Profile</a>
+                                    <a class="dropdown-item" href="{{ route('profile.show') }}">
+                                    <svg class="bi"><use xlink:href="#people"/></svg>
+                                    Profile</a>
                                     <a class="dropdown-item" href="#"><svg class="bi"><use xlink:href="#gear-wide-connected"/></svg>
                                     Config</a>
                                     <div class="dropdown-divider"></div>

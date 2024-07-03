@@ -18,8 +18,8 @@ class CreateReviewsTable extends Migration
             $table->timestamps();
 
             $table->foreign('service_request_id')->references('id')->on('service_requests')->onDelete('cascade');
-            $table->foreign('client_id')->references('id')->on('clients')->onDelete('cascade');
-            $table->foreign('artisan_id')->references('id')->on('artisans')->onDelete('cascade');
+            $table->foreign('client_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('artisan_id')->references('id')->on('client')->onDelete('cascade');
         });
     }
 

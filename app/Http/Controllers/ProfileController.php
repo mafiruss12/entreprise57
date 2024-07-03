@@ -12,7 +12,16 @@ class ProfileController extends Controller
         $user = Auth::user();
         $services = $user->services; // Récupère les services de l'utilisateur
         
-        return view('pages.profile', compact('user', 'services'));}
+        return view('pages.profile', compact('user', 'services'));
+    }
+    
+    public function settings()
+    {
+        $user = Auth::user();
+        $services = $user->services; // Récupère les services de l'utilisateur
+        
+        return view('profile.settings', compact('user', 'services'));
+    }
 
     public function edit()
     {
@@ -31,6 +40,7 @@ class ProfileController extends Controller
 
         $user->name = $request->name;
         $user->email = $request->email;
+       
         $user->save();
 
         return redirect()->route('profile.edit')->with('success', 'Profil mis à jour avec succès');

@@ -56,7 +56,7 @@
                 <form method="POST" action="{{ route('register') }}" class="register-form">
                         @csrf
                         <div class="form-group">
-        <input id="name" type="text" class="form-control @error('name') is-invalid @enderror " name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="name">
+        <input id="name" type="text" class="form-control @error('name') is-invalid @enderror " name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Nom & Prenom">
         @error('name')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
@@ -74,7 +74,7 @@
 
 </div>
                         <div class="form-group">
-        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror " name="password" required autocomplete="new-password" placeholder="password">
+        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror " name="password" required autocomplete="new-password" placeholder="Mot de passe">
         @error('password')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
@@ -83,11 +83,11 @@
                         </div>
                    
                         <div class="form-group">
-                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="password_confirmation">
+                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="Confirm Mot de passe">
                         </div>
                         <div class="form-group">
 
-<input id="specialty" type="text" class="form-control @error('specialty') is-invalid @enderror " name="specialty" value="{{ old('specialty') }}" required autocomplete="specialty" placeholder="specialty">
+<input id="specialty" type="text" class="form-control @error('specialty') is-invalid @enderror " name="specialty" value="{{ old('specialty') }}" required autocomplete="specialty" placeholder="Spécialité">
 @error('specialty')
 <span class="invalid-feedback" role="alert">
 <strong>{{ $message }}</strong>
@@ -96,7 +96,7 @@
 </div>
                         <div class="form-group">
 
-        <input id="location" type="text" class="form-control @error('location') is-invalid @enderror " name="location" value="{{ old('location') }}" required autocomplete="location" placeholder="location">
+        <input id="location" type="text" class="form-control @error('location') is-invalid @enderror " name="location" value="{{ old('location') }}" required autocomplete="location" placeholder="Localisation">
         @error('location')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
@@ -108,7 +108,7 @@
                         <div class="row mb-0">
                           <center>   <div class="col-md-12">
                                <button type="submit" class="btn btn-primary w-100">
-                               {{ __('Register') }}
+                               {{ __('Valider') }}
                                </button>
 <br>
                                 

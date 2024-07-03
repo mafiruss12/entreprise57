@@ -588,20 +588,22 @@ background-color:#f1f5f9;
           </div>
           <div>
             <a href="{{ route('profile.edit') }}"  class="btn btn-outline-primary
-              d-none d-md-block">Edit Profile</a>
+  d-none d-md-block">Edit Profile</a>
           </div>
         </div>
         <div class="container">
     <ul class="nav nav-lt-tab px-4" id="pills-tab" role="tablist">
-        <li class="nav-item">
+      <li class="nav-item">
+           
             <a class="nav-link active" href="#">
                 <div style="display: flex; align-items: center;">
                     @foreach($services as $service)
-                        <div class="btn btn-primary btn-sm mx-1">{{ $service->title }}</div>
+                        <div class="badge bg-primary rounded-pill d-inline">{{ $service->title }}</div>
                     @endforeach
                 </div>
             </a>
         </li>
+       
     </ul>
 </div>
 
@@ -638,7 +640,7 @@ background-color:#f1f5f9;
     </div>
   </div>
 </div>
-<<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 

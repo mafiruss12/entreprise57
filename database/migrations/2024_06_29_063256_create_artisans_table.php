@@ -16,8 +16,6 @@ class CreateArtisansTable extends Migration
             $table->string('address');
             $table->string('city');
             $table->timestamps();
-
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
