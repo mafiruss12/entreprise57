@@ -33,13 +33,21 @@ Route::post('/messages', [MessageController::class, 'sendMessage']);
 });
 // routes/web.php
 
-
+Route::get('paymant', function () {
+    return view('payment.paymant-bk');
+});
 Route::get('/services_all', [ServiceController::class, 'allServices'])->name('services_all')->middleware('auth');
 
 
 // Dans votre fichier de routes web (web.php)
 Route::post('/services/store', [ServiceController::class, 'store'])->name('services.store')->middleware('auth');
 
+Route::get('lang/{lang}', function ($lang) {
+    App::setLocale($lang);
+    session()->put('locale', $lang);
+    return redirect()->back();
+})->name('lang.switch');
+// Route::get('lang/{lang}', [App\Http\Controllers\LanguageController::class, 'switchLang'])->name('lang.switch');
 
 // Configuration des routes pour l'authentification et l'inscription
 Route::get('register', [RegisterController::class, 'showRegistrationForm'])->name('register');

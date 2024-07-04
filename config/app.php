@@ -30,6 +30,10 @@ return [
 
     'env' => env('APP_ENV', 'production'),
 
+
+'locale' => 'en', // La langue par défaut de votre application
+'fallback_locale' => 'en', // La langue de secours si la traduction n'est pas trouvée
+
     /*
     |--------------------------------------------------------------------------
     | Application Debug Mode

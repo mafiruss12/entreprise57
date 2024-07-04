@@ -11,23 +11,30 @@
           <div class="card-body">
             <div class="e-profile">
               <div class="row">
-                <div class="col-12 col-sm-auto mb-3">
-                  <div class="mx-auto" style="width: 140px;">
-                    <div class="d-flex justify-content-center align-items-center rounded" style="height: 140px; background-color: rgb(233, 236, 239);">
-                      <span style="color: rgb(166, 168, 170); font: bold 8pt Arial;">140x140</span>
-                    </div>
-                  </div>
-                </div>
+              <div class="col-12 col-sm-auto mb-3">
+    <div class="mx-auto" style="width: 140px;">
+        <div class="d-flex justify-content-center align-items-center rounded" style="height: 140px; background-color: rgb(233, 236, 239);">
+            @if($user->avatar)
+                <img src="{{ asset('storage/'.$user->avatar) }}" alt="Avatar" class="img-fluid rounded-circle" style="max-width: 140px;">
+            @else
+                <span style="color: rgb(166, 168, 170); font: bold 8pt Arial;">140x140</span>
+            @endif
+        </div>
+    </div>
+</div>
+
                 <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
                   <div class="text-center text-sm-left mb-2 mb-sm-0">
                     <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">{{ $user->name }}</h4>
                     <p class="mb-0">{{ Auth::user()->email }}</p>
                     <div class="text-muted"><small>Last seen 2 hours ago</small></div>
                     <div class="mt-2">
-                      <button class="btn btn-primary" type="button">
-                        <i class="fa fa-fw fa-camera"></i>
-                        <span>Change Photo</span>
-                      </button>
+                    <label for="avatar" class="btn btn-primary">
+    <i class="fa fa-fw fa-camera"></i>
+    <span>Change Photo</span>
+    <input id="avatar" type="file" style="display: none;" accept="image/*">
+</label>
+
                     </div>
                   </div>
                   <div class="text-center text-sm-right">
@@ -58,6 +65,7 @@
                                 </span>
                             @enderror
                         </div>
+ <!-- Avatar upload -->
 
                         <div class="form-group">
                             <label for="email">{{ __('E-Mail Address') }}</label>
@@ -100,9 +108,9 @@
         </div>
         <div class="card">
           <div class="card-body">
-            <h6 class="card-title font-weight-bold">Support</h6>
+            <h6 class="card-title font-weight-bold">Assistant Client</h6>
             <p class="card-text">Get fast, free help from our friendly assistants.</p>
-            <button type="button" class="btn btn-primary">Contact Us</button>
+            <button type="button" class="btn btn-primary">Contactez-nous</button>
           </div>
         </div>
       </div>

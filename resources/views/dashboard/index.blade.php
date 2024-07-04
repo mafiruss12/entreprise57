@@ -14,7 +14,74 @@
     <meta name="generator" content="Hugo 0.122.0">
     <title>Dashboard -Entreprise57</title>
 
+    <style>
+  body{
+    margin-top:20px;
+    background:#dcdcdc
+}
 
+.widget-signups__list {
+    text-align: center
+}
+
+.widget-signups__list>a {
+    vertical-align: top;
+    margin: 4px 2px;
+    display: inline-block
+}
+
+.widget-signups__list .avatar-char {
+    background-color: #eee;
+    color: #000
+}
+
+.widget-signups__list .avatar-char,
+.widget-signups__list .avatar-img {
+    margin: 0
+}
+
+.avatar-img {
+    border-radius: 2px;
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1.2rem;
+}
+
+.avatar-char {
+    line-height: 2.9rem;
+    font-size: 1.2rem;
+    text-align: center;
+    font-style: normal;
+}
+
+.avatar-char, .avatar-img {
+    border-radius: 2px;
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1.2rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    line-height: 140%;
+    margin-top: -5px;
+}
+
+.card-title {
+    margin-bottom: 2.1rem;
+}
+
+.card-subtitle:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+.card-subtitle {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: -1.45rem;
+    line-height: 1.5;
+}
+</style>
 
 <link href="bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="bootstrap-5.3.3-dist/js/color-modes.js"></script>
@@ -309,7 +376,7 @@
         <li class="nav-item" style="background: gainsboro;border-radius:5px">
           <a class="nav-link d-flex align-items-center gap-2 active" href="{{ route('dashboard') }}" class=" aria-current="page" href="#">
             <svg class="bi"><use xlink:href="#house-fill"/></svg>
-            Dashboard
+            {{ __('dashboard') }}
           </a>
         </li>
         <li class="nav-item">
@@ -318,7 +385,7 @@
           </a>
         </li>
         <li class="nav-item">
-        <a class="nav-link d-flex align-items-center gap-2 justify-content-between" href="{{ route('chat.index') }}">
+        <a class="nav-link d-flex align-items-center gap-2 " href="{{ route('chat.index') }}">
         <svg class="bi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M128 0C110.3 0 96 14.3 96 32V224h96V192c0-35.3 28.7-64 64-64H480V32c0-17.7-14.3-32-32-32H128zM256 160c-17.7 0-32 14.3-32 32v32h96c35.3 0 64 28.7 64 64V416H576c17.7 0 32-14.3 32-32V192c0-17.7-14.3-32-32-32H256zm240 64h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H496c-8.8 0-16-7.2-16-16V240c0-8.8 7.2-16 16-16zM64 256c-17.7 0-32 14.3-32 32v13L187.1 415.9c1.4 1 3.1 1.6 4.9 1.6s3.5-.6 4.9-1.6L352 301V288c0-17.7-14.3-32-32-32H64zm288 84.8L216 441.6c-6.9 5.1-15.3 7.9-24 7.9s-17-2.8-24-7.9L32 340.8V480c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V340.8z"/></svg>           
            Chat<span class="badge bg-primary  ml-auto">4</span>
           </a>
@@ -335,9 +402,9 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link d-flex align-items-center gap-2" href="#">
+          <a class="nav-link d-flex align-items-center gap-2" href="paymant" >
             <svg class="bi"><use xlink:href="#puzzle"/></svg>
-            Integrations
+            Paiment
           </a>
         </li>
       </ul>
@@ -381,13 +448,13 @@
         <li class="nav-item">
           <a class="nav-link d-flex align-items-center gap-2" href="{{ route('profile.settings') }}">
             <svg class="bi"><use xlink:href="#gear-wide-connected"/></svg>
-            Settings
+            {{ __('settings') }}
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link d-flex align-items-center gap-2" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
             <svg class="bi"><use xlink:href="#door-closed"/></svg>
-            {{ __('Logout') }}
+            {{ __('logout') }}
           </a>
         </li>
       </ul>
@@ -399,34 +466,122 @@
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4" style="margin-top:100px">
   
 
- <div class="container-fluid py-4">
-            <div class="row">
-                
-                <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-                    <div class="card">
-                        <div class="card-header p-3 pt-2">
-                            <div
-                                class="icon icon-lg icon-shape bg-gradient-dark shadow-dark text-center border-radius-xl mt-n4 position-absolute">
-                                <i class="material-icons opacity-10">55</i>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<div class="container">
+<div class="row row-cols-1 row-cols-md-2 row-cols-xl-4">
+       <div class="col">
+		 <div class="card radius-10 border-start border-0 border-3 border-info">
+			<div class="card-body">
+				<div class="d-flex align-items-center">
+					<div>
+						<p class="mb-0 text-secondary">Total Orders</p>
+						<h4 class="my-1 text-info">4805</h4>
+						<p class="mb-0 font-13">+2.5% from last week</p>
+					</div>
+					<div class="widgets-icons-2 rounded-circle bg-gradient-scooter text-white ms-auto"><i class="fa fa-shopping-cart"></i>
+					</div>
+				</div>
+			</div>
+		 </div>
+	   </div>
+	   <div class="col">
+		<div class="card radius-10 border-start border-0 border-3 border-danger">
+		   <div class="card-body">
+			   <div class="d-flex align-items-center">
+				   <div>
+					   <p class="mb-0 text-secondary">Total Revenue</p>
+					   <h4 class="my-1 text-danger">$84,245</h4>
+					   <p class="mb-0 font-13">+5.4% from last week</p>
+				   </div>
+				   <div class="widgets-icons-2 rounded-circle bg-gradient-bloody text-white ms-auto"><i class="fa fa-dollar"></i>
+				   </div>
+			   </div>
+		   </div>
+		</div>
+	  </div>
+	  <div class="col">
+		<div class="card radius-10 border-start border-0 border-3 border-success">
+		   <div class="card-body">
+			   <div class="d-flex align-items-center">
+				   <div>
+					   <p class="mb-0 text-secondary">Bounce Rate</p>
+					   <h4 class="my-1 text-success">34.6%</h4>
+					   <p class="mb-0 font-13">-4.5% from last week</p>
+				   </div>
+				   <div class="widgets-icons-2 rounded-circle bg-gradient-ohhappiness text-white ms-auto"><i class="fa fa-bar-chart"></i>
+				   </div>
+			   </div>
+		   </div>
+		</div>
+	  </div>
+	  <div class="col">
+		<div class="card radius-10 border-start border-0 border-3 border-warning">
+		   <div class="card-body">
+			   <div class="d-flex align-items-center">
+				   <div>
+					   <p class="mb-0 text-secondary">Total Customers</p>
+					   <h4 class="my-1 text-warning">8.4K</h4>
+					   <p class="mb-0 font-13">+8.4% from last week</p>
+				   </div>
+				   <div class="widgets-icons-2 rounded-circle bg-gradient-blooker text-white ms-auto"><i class="fa fa-users"></i>
+				   </div>
+			   </div>
+		   </div>
+		</div>
+	  </div> 
+    
+	</div>
+  <div class="col-md-6 mt-3">
+            <div class="card widget-signups">
+                <div class="card-body">
+                    <h4 class="card-title">Liste des Client (Demande Service)</h4>
+                    <h6 class="card-subtitle">Nouvelle demande</h6>
+            
+                    <div class="actions actions--inverse">
+                        <div class="actions__item">
+                            <i data-toggle="dropdown" class="zmdi zmdi-more-vert" aria-expanded="false"></i>
+                            <div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; transform: translate3d(35px, 28px, 0px); top: 0px; left: 0px; will-change: transform;">
+                                <a href="" class="dropdown-item">Refresh</a>
+                                <a href="" class="dropdown-item">Manage Widgets</a>
+                                <a href="" class="dropdown-item">Settings</a>
                             </div>
-                            <div class="text-end pt-1">
-                                <p class="text-sm mb-0 text-capitalize">5555</p>
-                                <h4 class="mb-0">$53k</h4>
-                            </div>
-                          </div>
-                        <hr class="dark horizontal my-0">
-                        <div class="card-footer p-3">
-                            <p class="mb-0"><span class="text-success text-sm font-weight-bolder">+55% </span>than
-                                lask week</p>
                         </div>
-                        
                     </div>
-                  </div> 
-            <div class="container bg-primary text-white mt-5">
-<marquee behavior="" direction="left">Lorem ipsum <span style="color:red"> <b>dolor sit</b></span>, amet consectetur adipisicing elit. Nisi error repellat quo, neque in esse consectetur omnis voluptatibus sint possimus, obcaecati eius? Vitae ipsum neque similique accusamus in nisi aspernatur!</marquee>
+            
+                    <div class="widget-signups__list">
+                        <a data-toggle="tooltip" title="" href="" data-original-title="Jani Popovich"><img class="avatar-img" src="http://bootdey.com/img/Content/avatar/avatar1.png" alt=""></a>
+                        <a data-toggle="tooltip" title="" href="" data-original-title="Rosina Lamont"><div class="avatar-char">R</div></a>
+                        <a data-toggle="tooltip" title="" href="" data-original-title="Wava Vermeulen"><div class="avatar-char">W</div></a>
+                        <a data-toggle="tooltip" title="" href="" data-original-title="Delisa Sheilds"><img class="avatar-img" src="http://bootdey.com/img/Content/avatar/avatar2.png" alt=""></a>
+                        <a data-toggle="tooltip" title="" href="" data-original-title="Elsy Wilhoit"><img class="avatar-img" src="http://bootdey.com/img/Content/avatar/avatar3.png" alt=""></a>
+                        <a data-toggle="tooltip" title="" href="" data-original-title="Deanne Jeffreys"><div class="avatar-char">D</div></a>
+                        <a data-toggle="tooltip" title="" href="" data-original-title="ddsds"><div class="avatar-char">F</div></a>
+                        <a data-toggle="tooltip" title="" href="" data-original-title="Shery Heredia"><div class="avatar-char">S</div></a>
+                        <a data-toggle="tooltip" title="" href="" data-original-title="Gaylord Coolbaugh"><div class="avatar-char">G</div></a>
+                        <a data-toggle="tooltip" title="" href="" data-original-title="Lyda Wortman"><div class="avatar-char">L</div></a>
+                        <a data-toggle="tooltip" title="" href="" data-original-title="Corene Langstaff"><img class="avatar-img" src="http://bootdey.com/img/Content/avatar/avatar4.png" alt=""></a>
+                        <a data-toggle="tooltip" title="" href="" data-original-title="Aracely Goudeau"><img class="avatar-img" src="http://bootdey.com/img/Content/avatar/avatar5.png" alt=""></a>
+                        <a data-toggle="tooltip" title="" href="" data-original-title="Matilde Weibel"><div class="avatar-char">M</div></a>
+                        <a data-toggle="tooltip" title="" href="" data-original-title="Clement Mayor"><div class="avatar-char">C</div></a>
+                        <a data-toggle="tooltip" title="" href="" data-original-title="Phil Wyatt"><div class="avatar-char">P</div></a>
+                        <a data-toggle="tooltip" title="" href="" data-original-title="Altagracia Manke"><div class="avatar-char">A</div></a>
+                        <a data-toggle="tooltip" title="" href="" data-original-title="Siu Derosier"><div class="avatar-char">S</div></a>
+                        <a data-toggle="tooltip" title="" href="" data-original-title="Nigel Shipe"><img class="avatar-img" src="http://bootdey.com/img/Content/avatar/avatar6.png" alt=""></a>
+                        <a data-toggle="tooltip" title="" href="" data-original-title="Bossman"><div class="avatar-char">B</div></a>
+                        <a data-toggle="tooltip" title="" href="" data-original-title="Crystal Markel"><div class="avatar-char">C</div></a>
+                        <a data-toggle="tooltip" title="" href="" data-original-title="Noman Nottage"><div class="avatar-char">N</div></a>
+                        <a data-toggle="tooltip" title="" href="" data-original-title="Melonie Carreira"><img class="avatar-img" src="http://bootdey.com/img/Content/avatar/avatar7.png" alt=""></a>
+                        <a data-toggle="tooltip" title="" href="" data-original-title="Shaneka Hoyle"><div class="avatar-char">S</div></a>
+                        <a data-toggle="tooltip" title="" href="" data-original-title="Milagro Evans"><div class="avatar-char">M</div></a>
+                    </div>
+                </div>
+                </div>
+                </div>
 </div>
-           
-</div>
+        
+          
+
    
     </main>
   </div>

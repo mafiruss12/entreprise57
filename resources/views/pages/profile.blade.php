@@ -588,7 +588,7 @@ background-color:#f1f5f9;
           </div>
           <div>
             <a href="{{ route('profile.edit') }}"  class="btn btn-outline-primary
-  d-none d-md-block">Edit Profile</a>
+  d-none d-md-block">{{ __('edit profile') }}</a>
           </div>
         </div>
         <div class="container">
@@ -681,181 +681,9 @@ background-color:#f1f5f9;
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-12">
-        <!-- card -->
-        <div class="card mb-5 rounded-3">
-          <div>
-            <img src="https://bootdey.com/image/480x180/191970/ffffff" alt="Image" class="img-fluid rounded-top">
-          </div>
-          <!-- avatar -->
-          <div class="avatar avatar-xl mt-n7 ms-4">
-            <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="Image" class="rounded-circle border-4
-              border-white-color-40">
-          </div>
-          <!-- card body -->
-          <div class="card-body">
-            <!-- Title -->
-            <h4 class="mb-1">Dianna Smiley</h4>
-            <p>Full Stack Developer</p>
-            <div>
-              <!-- Dropdown -->
-              <div class="d-flex justify-content-between
-                align-items-center">
-                <a href="#!" class="btn btn-outline-secondary">Following</a>
-                <div class="dropdown dropstart">
-                  <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle" id="dropdownMenuTwo" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical icon-xs"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg>
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuTwo">
-                    <a class="dropdown-item d-flex align-items-center" href="#!"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text me-2 icon-xxs dropdown-item-icon"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>Report</a>
-                    <a class="dropdown-item d-flex align-items-center" href="#!"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-slash me-2 icon-xxs dropdown-item-icon"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg>Block</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-12">
-        <!-- card -->
-        <div class="card mb-5 rounded-3">
-          <div>
-            <img src="https://bootdey.com/image/480x180/191970/ffffff" alt="Image" class="img-fluid rounded-top">
-          </div>
-          <!-- avatar -->
-          <div class="avatar avatar-xl mt-n7 ms-4">
-            <img src="https://bootdey.com/img/Content/avatar/avatar4.png" alt="Image" class="rounded-circle border-4
-              border-white-color-40">
-          </div>
-          <!-- card body -->
-          <div class="card-body">
-            <!-- Title -->
-            <h4 class="mb-1">Anne Brewer</h4>
-            <p>Content Marketing Managers</p>
-            <div>
-              <!-- Dropdown -->
-              <div class="d-flex justify-content-between
-                align-items-center">
-                <a href="#!" class="btn btn-outline-primary">Follow</a>
-                <div class="dropdown dropstart">
-                  <a href="#!" id="dropdownMenuThree" class="btn btn-ghost btn-icon btn-sm rounded-circle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical icon-xs"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg>
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuThree">
-                    <a class="dropdown-item d-flex align-items-center" href="#!"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text me-2 icon-xxs dropdown-item-icon"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>Report</a>
-                    <a class="dropdown-item d-flex align-items-center" href="#!"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-slash me-2 icon-xxs dropdown-item-icon"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg>Block</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-12">
-        <!-- card -->
-        <div class="card mb-5 rounded-3">
-          <div>
-            <img src="https://bootdey.com/image/480x180/191970/ffffff" alt="Image" class="img-fluid rounded-top">
-          </div>
-          <!-- avatar -->
-          <div class="avatar avatar-xl mt-n7 ms-4">
-            <img src="https://bootdey.com/img/Content/avatar/avatar8.png" alt="Image" class="rounded-circle border-4
-              border-white-color-40">
-          </div>
-          <!-- card body -->
-          <div class="card-body">
-            <!-- Title -->
-            <h4 class="mb-1">Diane Baughman</h4>
-            <p>Senior UX Designer</p>
-            <div>
-              <!-- Dropdown -->
-              <div class="d-flex justify-content-between
-                align-items-center">
-                <a href="#!" class="btn btn-outline-primary">Follow</a>
-                <div class="dropdown dropstart">
-                  <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle" id="dropdownMenuFour" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical icon-xs"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg>
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuFour">
-                    <a class="dropdown-item d-flex align-items-center" href="#!"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text me-2 icon-xxs dropdown-item-icon"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>Report</a>
-                    <a class="dropdown-item d-flex align-items-center" href="#!"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-slash me-2 icon-xxs dropdown-item-icon"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg>Block</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-12">
-        <!-- card -->
-        <div class="card mb-5 rounded-3">
-          <div>
-            <img src="https://bootdey.com/image/480x180/191970/ffffff" alt="Image" class="img-fluid rounded-top">
-          </div>
-          <!-- avatar -->
-          <div class="avatar avatar-xl mt-n7 ms-4">
-            <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="Image" class="rounded-circle border-4
-              border-white-color-40">
-          </div>
-          <!-- card body -->
-          <div class="card-body">
-            <!-- Title -->
-            <h4 class="mb-1">Roland Thomas</h4>
-            <p>Front-End Enginee</p>
-            <div>
-              <!-- Dropdown -->
-              <div class="d-flex justify-content-between
-                align-items-center">
-                <a href="#!" class="btn btn-outline-secondary">Following</a>
-                <div class="dropdown dropstart">
-                  <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle" id="dropdownMenuFive" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical icon-xs"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg>
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuFive">
-                    <a class="dropdown-item d-flex align-items-center" href="#!"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text me-2 icon-xxs dropdown-item-icon"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>Report</a>
-                    <a class="dropdown-item d-flex align-items-center" href="#!"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-slash me-2 icon-xxs dropdown-item-icon"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg>Block</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-12">
-        <!-- card -->
-        <div class="card mb-5 rounded-3">
-          <div>
-            <img src="https://bootdey.com/image/480x180/191970/ffffff" alt="Image" class="img-fluid rounded-top">
-          </div>
-          <!-- avatar -->
-          <div class="avatar avatar-xl mt-n7 ms-4">
-            <img src="https://bootdey.com/img/Content/avatar/avatar5.png" alt="Image" class="rounded-circle border-4
-              border-white-color-40">
-          </div>
-          <!-- card body -->
-          <div class="card-body">
-            <!-- Title -->
-            <h4 class="mb-1">Joshua George</h4>
-            <p>UX Desginer</p>
-            <div>
-              <!-- Dropdown -->
-              <div class="d-flex justify-content-between
-                align-items-center">
-                <a href="#!" class="btn btn-outline-primary">Follow</a>
-                <div class="dropdown dropstart">
-                  <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle" id="dropdownMenuSix" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical icon-xs"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg>
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuSix">
-                    <a class="dropdown-item d-flex align-items-center" href="#!"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text me-2 icon-xxs dropdown-item-icon"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>Report</a>
-                    <a class="dropdown-item d-flex align-items-center" href="#!"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-slash me-2 icon-xxs dropdown-item-icon"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg>Block</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h1 class=" text-white " style="background: linear-gradient(356deg, rgba(34,193,195,1) 0%, rgba(245,253,45,1) 100%);"><center>Localisation</center></h1>
+      <div id="map" style="height: 500px;"></div>
+     
     </div>
   </div>
 </div>
@@ -870,7 +698,6 @@ background-color:#f1f5f9;
 @section('content')
 
 <div class="card-body">
-                    <div id="map" style="height: 500px;"></div>
                 </div>
 <!-- Inclure les fichiers CSS et JS de Leaflet -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
@@ -895,7 +722,7 @@ background-color:#f1f5f9;
 
                 // Ajouter une couche de tuiles (tile layer)
                 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                    attribution: '&copy; <a href="https://www.devhomeentreprise.com">Devhome Entreprise</a> contributors'
                 }).addTo(map);
 
                 // Ajouter un marqueur à la position de l'utilisateur

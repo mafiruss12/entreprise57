@@ -1,0 +1,11 @@
+{
+    "welcome": "Bienvenue",
+    "logout": "Déconnexion",
+    "language": "Langue",
+    "profile": "Profil",
+    "settings": "Paramètres",
+    "dashboard":"Tableau de bord",
+    "search":"Recherche",
+    "services":"services",
+    "edit profile":"modifier le profil"
+}
