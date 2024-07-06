@@ -63,143 +63,142 @@
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
-                <div class="masthead-subheading">Chez Artisan CI</div>
-                <div class="masthead-heading text-uppercase">Bienvenue sur notre plateforme</div>
-                <a class="btn btn-primary btn-sm text-uppercase" href="{{ route('register') }}">S'inscrire</a>
-                <a class="btn btn-secondary btn-sm text-uppercase" href="{{ route('login') }}">Connexion</a>
+                <div class="masthead-subheading">At Artisan CI</div>
+                <div class="masthead-heading text-uppercase">Welcome to our platform</div>
+                <a class="btn btn-primary btn-sm text-uppercase" href="{{ route('register') }}">sign up</a>
+                <a class="btn btn-secondary btn-sm text-uppercase" href="{{ route('login') }}">sign in</a>
             </div>
         </header>
         <!-- Services-->
         <section class="page-section" id="services">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Quelque Services</h2>
-                    <h3 class="section-subheading text-muted">Offrir par les Artisans (Prestataire).</h3>
+                    <h2 class="section-heading text-uppercase">Some Services</h2>
+                    <h3 class="section-subheading text-muted">Offered by Artisans (Providers).
+                    .</h3>
                 </div>
                 <div class="row text-center">
-                <div class="col-md-4">
-               
-                    <img src="images/capture.png" alt="" class="custom-img">
-                    <h4 class="my-3">Electricien</h4>
-                    <p class="text-muted">Installation, réparation et entretien des systèmes électriques résidentiels et commerciaux.</p>
-                </div>
-                <div class="col-md-4">
-                   
-                    <img src="images/th.png" alt="" class="custom-img">
-                    <h4 class="my-3">Plombier </h4>
-                    <p class="text-muted"> Services de plomberie incluant l'installation et la réparation de tuyauteries, de systèmes de chauffage, de climatisation et d'évacuation des eaux usées.</p>
-                </div>
-                <div class="col-md-4">
-                    
-                    <img src="images/aa.png" alt="" class="custom-img">
-                    <h4 class="my-3">Menuisier </h4>
-                    <p class="text-muted">Fabrication et réparation de meubles, portes, fenêtres et autres structures en bois</p>
-                </div>
-                    
-                </div>
-            </div>
-        </section>
-        <!-- Portfolio Grid-->
-        <section class="page-section bg-light" id="portfolio">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">PROJECT</h2>
-                    <h3 class="section-subheading text-muted">Quelque Projet Réaliser par Artisan CI</h3>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- Portfolio item 1-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="assets/img/portfolio/1.jpg" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Threads</div>
-                                <div class="portfolio-caption-subheading text-muted">Illustration</div>
-                            </div>
+    <div class="col-md-4">
+        <img src="images/capture.png" alt="" class="custom-img">
+        <h4 class="my-3">Electrician</h4>
+        <p class="text-muted">Installation, repair, and maintenance of residential and commercial electrical systems.</p>
+    </div>
+    <div class="col-md-4">
+        <img src="images/th.png" alt="" class="custom-img">
+        <h4 class="my-3">Plumber</h4>
+        <p class="text-muted">Plumbing services including installation and repair of piping, heating, cooling, and wastewater systems.</p>
+    </div>
+    <div class="col-md-4">
+        <img src="images/aa.png" alt="" class="custom-img">
+        <h4 class="my-3">Carpenter</h4>
+        <p class="text-muted">Manufacture and repair of furniture, doors, windows, and other wooden structures.</p>
+    </div>
+</div>
+</div>
+</section>
+
+<!-- Portfolio Grid-->
+<section class="page-section bg-light" id="portfolio">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Projects</h2>
+            <h3 class="section-subheading text-muted">Some Projects Completed by Artisan CI</h3>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-sm-6 mb-4">
+                <!-- Portfolio item 1-->
+                <div class="portfolio-item">
+                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- Portfolio item 2-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="assets/img/portfolio/2.jpg" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Explore</div>
-                                <div class="portfolio-caption-subheading text-muted">Graphic Design</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- Portfolio item 3-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="assets/img/portfolio/3.jpg" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Finish</div>
-                                <div class="portfolio-caption-subheading text-muted">Identity</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                        <!-- Portfolio item 4-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="assets/img/portfolio/4.jpg" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Lines</div>
-                                <div class="portfolio-caption-subheading text-muted">Branding</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
-                        <!-- Portfolio item 5-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="assets/img/portfolio/5.jpg" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Southwest</div>
-                                <div class="portfolio-caption-subheading text-muted">Website Design</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <!-- Portfolio item 6-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="assets/img/portfolio/6.jpg" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Window</div>
-                                <div class="portfolio-caption-subheading text-muted">Photography</div>
-                            </div>
-                        </div>
+                        <img class="img-fluid" src="assets/img/portfolio/1.jpg" alt="..." />
+                    </a>
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">Threads</div>
+                        <div class="portfolio-caption-subheading text-muted">Illustration</div>
                     </div>
                 </div>
             </div>
-        </section>
+            <div class="col-lg-4 col-sm-6 mb-4">
+                <!-- Portfolio item 2-->
+                <div class="portfolio-item">
+                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/portfolio/2.jpg" alt="..." />
+                    </a>
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">Explore</div>
+                        <div class="portfolio-caption-subheading text-muted">Graphic Design</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-4">
+                <!-- Portfolio item 3-->
+                <div class="portfolio-item">
+                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/portfolio/3.jpg" alt="..." />
+                    </a>
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">Finish</div>
+                        <div class="portfolio-caption-subheading text-muted">Identity</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                <!-- Portfolio item 4-->
+                <div class="portfolio-item">
+                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/portfolio/4.jpg" alt="..." />
+                    </a>
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">Lines</div>
+                        <div class="portfolio-caption-subheading text-muted">Branding</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+                <!-- Portfolio item 5-->
+                <div class="portfolio-item">
+                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/portfolio/5.jpg" alt="..." />
+                    </a>
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">Southwest</div>
+                        <div class="portfolio-caption-subheading text-muted">Website Design</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <!-- Portfolio item 6-->
+                <div class="portfolio-item">
+                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/portfolio/6.jpg" alt="..." />
+                    </a>
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">Window</div>
+                        <div class="portfolio-caption-subheading text-muted">Photography</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
         <!-- About-->
         <section class="page-section" id="about">
             <!-- <div class="container">
@@ -315,11 +314,9 @@
             <div class="section-title ml-lg-5">
                 <h2 class="text-custom font-weight-normal mb-3">About Us</h2>
                 <h4 class="title mb-4">
-                Nous visons à promouvoir <br> et à soutenir les artisans locaux en facilitant <br>l'accès aux services et en encourageant la collaboration entre prestataires et clients.
-
-
-                </h4>
-                <p class="text-muted mb-0">Bienvenue sur <b><em>Artisan CI</em></b>, une plateforme dédiée à la promotion des métiers artisanaux. Notre application facilite la connexion entre les prestataires de services artisanaux et les clients à la recherche de compétences spécifiques. Que vous ayez besoin de services de construction, de réparation, de design ou d'autres métiers artisanaux, vous trouverez ici une communauté de prestataires qualifiés prêts à répondre à vos besoins.</p>
+            We aim to promote <br> and support local artisans by facilitating <br>access to services and encouraging collaboration between providers and clients.
+        </h4>
+        <p class="text-muted mb-0">Welcome to <b><em>Artisan CI</em></b>, a platform dedicated to promoting artisanal trades. Our application facilitates the connection between providers of artisanal services and clients seeking specific skills. Whether you need construction, repair, design, or other artisanal services, you will find a community of qualified providers ready to meet your needs.</p>
 
                 <div class="row">
                     <div class="col-lg-6 mt-4 pt-2">
@@ -358,24 +355,25 @@
         <section class="page-section bg-light" id="team">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">List Of Prestataire</h2>
-                    <h3 class="section-subheading text-muted">Chaque domaine artisanal comporte de nombreux métiers et spécialisations</h3>
+                <h2 class="section-heading text-uppercase">List Of Providers</h2>
+                <h3 class="section-subheading text-muted">Each artisanal domain has many trades and specializations</h3>
                 </div>
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="team-member">
                             <img class="mx-auto rounded-circle" src="storage/photos/HfFlAJDZ08AvZrFVweBiNGHVjEg3BqHpfb65h37C.jpg" alt="..." />
                             <h4>Parveen Anand</h4>
-                            <p class="text-muted">Menuisier</p>
-                            <a class="btn btn-primary btn-sm text-uppercase" href="{{ route('register') }}">Demande Service</a>
+                            <p class="text-muted">Carpenter</p>
+                            <a class="btn btn-primary btn-sm text-uppercase" href="{{ route('register') }}">Request Service</a>
                             </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="team-member">
                             <img class="mx-auto rounded-circle" src="storage/photos/fQRqFEsu0CSq7ZJao6oazlrZoPXQP4kTbW4ZRwiD.jpg" alt="..." />
                             <h4>Parker Petersen</h4>
-                            <p class="text-muted">Verriers</p>
-                            <a class="btn btn-primary btn-sm text-uppercase" href="{{ route('register') }}">Demande Service</a>
+                            <p class="text-muted">Glassmaker</p>
+                    <a class="btn btn-primary btn-sm text-uppercase" href="{{ route('register') }}">Request Service</a>
+                </div>
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -383,16 +381,16 @@
                             <img class="mx-auto rounded-circle" src="assets/img/team/3.jpg" alt="..." />
                             <h4>Larry Parker</h4>
                             <p class="text-muted">Lead Developer</p>
-                            <a class="btn btn-primary btn-sm text-uppercase" href="{{ route('register') }}">Demande Service</a>
+                    <a class="btn btn-primary btn-sm text-uppercase" href="{{ route('register') }}">Request Service</a>
 
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-8 mx-auto text-center">
-                        <p class="large text-muted">Les artisans sont des professionnels spécialisés dans des métiers manuels ou créatifs qui requièrent souvent un haut niveau de compétence technique et artistique. Leur travail est souvent caractérisé par l'attention portée aux détails, la maîtrise des matériaux et des outils traditionnels, ainsi que la capacité à créer des pièces uniques et personnalisées. </p>
-                        <a class="btn btn-danger btn-sm text-lowercase" href="{{ route('register') }}">Voir Plus ↓</a>
-                        </div>
+                    <p class="large text-muted">Artisans are professionals specialized in manual or creative trades that often require a high level of technical and artistic skill. Their work is often characterized by attention to detail, mastery of materials and traditional tools, and the ability to create unique and personalized pieces.</p>
+                    <a class="btn btn-danger btn-sm text-lowercase" href="{{ route('register') }}">See More ↓</a>
+                    </div>
                 </div>
             </div>
         </section>
