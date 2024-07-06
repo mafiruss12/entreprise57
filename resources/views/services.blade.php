@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    
     <meta name="generator" content="Hugo 0.122.0">
     <title>Dashboard -Entreprise57</title>
 
@@ -97,7 +97,9 @@
       }
     </style>
 
-    
+    <!-- Other head elements -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css">
+
     <!-- Custom styles for this template -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
@@ -301,38 +303,69 @@
 
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4" style="margin-top:100px">
-  
+    @section('content')
+
 
     <div class="container">
         <h1>Profil de {{ Auth::user()->name }}</h1>
         <p>Email:{{ Auth::user()->email }}</p>
 
-        <h2>Services</h2>
-        @if($services->isEmpty())
-            <p>Aucun service trouvé.</p>
-        @else
-            <table class="table">
-                <thead>
+        <div class="container">
+    <h2>Services</h2>
+
+    <div class="search-form mb-3">
+        <form action="" method="GET" class="d-flex">
+            <input class="form-control me-2" type="search" name="search" placeholder="{{ __('Search') }}" aria-label="Search" value="{{ request()->search }}">
+            <button class="btn btn-outline-success" type="submit">{{ __('Search') }}</button>
+        </form>
+    </div>
+
+    @if($services->isEmpty())
+        <p>Aucun service trouvé.</p>
+    @else
+        <table class="table table-striped">
+             <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nom du Service</th>
+                    <th>Description</th>
+                    <th>Date de Création</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($services as $service)
                     <tr>
-                        <th>ID</th>
-                        <th>Nom du Service</th>
-                        <th>Description</th>
-                        <th>Date de Création</th>
+                        <td>{{ $service->id }}</td>
+                        <td>{{ $service->title }}</td>
+                        <td>{{ $service->description }}</td>
+                        <td>{{ $service->created_at }}</td>
+                        <td>
+                            <a href="" class="btn btn-info btn-sm">
+                                <i class="bi bi-info-circle"></i>
+                            </a>
+                            <a href="" class="btn btn-warning btn-sm">
+                                <i class="bi bi-pencil-square"></i>
+                            </a>
+                            <form action="" method="POST" style="display:inline;">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </form>
+                        </td>
                     </tr>
-                </thead>
-                <tbody>
-                    @foreach($services as $service)
-                        <tr>
-                            <td>{{ $service->id }}</td>
-                            <td>{{ $service->title }}</td>
-                            <td>{{ $service->description }}</td>
-                            <td>{{ $service->created_at }}</td>
-                            <td>{{ $service->user_id }}</td>
-                        </tr>
-                    @endforeach
-                </tbody>
-            </table>
-        @endif
+                @endforeach
+            </tbody>
+        </table>
+        
+        <!-- Pagination -->
+        <div class="d-flex justify-content-center">
+        </div>
+    @endif
+</div>
+@endsection
 
         <h2>Ajouter un Service</h2>
         <form action="{{ route('services.store') }}" method="POST"  class="register-form">

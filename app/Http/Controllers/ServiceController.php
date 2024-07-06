@@ -12,6 +12,17 @@ class ServiceController extends Controller
     {
         $services = Service::all();
         return view('services', compact('services'));
+        
+        $query = Service::query();
+
+        if ($request->has('search')) {
+            $query->where('title', 'like', '%' . $request->search . '%')
+                  ->orWhere('description', 'like', '%' . $request->search . '%');
+        }
+
+        $services = $query->paginate(10);
+
+        return view('services.index', compact('services'));
     }
 
     // Afficher le formulaire pour créer un nouveau service

@@ -39,7 +39,7 @@
                         <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
                         <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#team">Prestataire</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -65,8 +65,8 @@
             <div class="container">
                 <div class="masthead-subheading">Chez Artisan CI</div>
                 <div class="masthead-heading text-uppercase">Bienvenue sur notre plateforme</div>
-                <a class="btn btn-primary btn-xl text-uppercase" href="{{ route('register') }}">S'inscrire</a>
-                <a class="btn btn-secondary btn-xl text-uppercase" href="{{ route('login') }}">Connexion</a>
+                <a class="btn btn-primary btn-sm text-uppercase" href="{{ route('register') }}">S'inscrire</a>
+                <a class="btn btn-secondary btn-sm text-uppercase" href="{{ route('login') }}">Connexion</a>
             </div>
         </header>
         <!-- Services-->
@@ -78,28 +78,19 @@
                 </div>
                 <div class="row text-center">
                 <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                    </span>
+               
                     <img src="images/capture.png" alt="" class="custom-img">
                     <h4 class="my-3">Electricien</h4>
                     <p class="text-muted">Installation, réparation et entretien des systèmes électriques résidentiels et commerciaux.</p>
                 </div>
                 <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                    </span>
+                   
                     <img src="images/th.png" alt="" class="custom-img">
                     <h4 class="my-3">Plombier </h4>
                     <p class="text-muted"> Services de plomberie incluant l'installation et la réparation de tuyauteries, de systèmes de chauffage, de climatisation et d'évacuation des eaux usées.</p>
                 </div>
                 <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                    </span>
+                    
                     <img src="images/aa.png" alt="" class="custom-img">
                     <h4 class="my-3">Menuisier </h4>
                     <p class="text-muted">Fabrication et réparation de meubles, portes, fenêtres et autres structures en bois</p>
@@ -211,7 +202,7 @@
         </section>
         <!-- About-->
         <section class="page-section" id="about">
-            <div class="container">
+            <!-- <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">About</h2>
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
@@ -269,34 +260,122 @@
                         </div>
                     </li>
                 </ul>
+            </div> -->
+            <div class="container">
+    <div class="row align-items-center">
+        <div class="col-lg-6 col-md-6 order-2 order-md-1 mt-4 pt-2 mt-sm-0 opt-sm-0">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-6 col-6">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 mt-4 pt-2">
+                            <div class="card work-desk rounded border-0 shadow-lg overflow-hidden">
+                                <img src="https://www.bootdey.com/image/241x362/FFB6C1/000000" class="img-fluid" alt="Image" />
+                                <div class="img-overlay bg-dark"></div>
+                            </div>
+                        </div>
+                        <!--end col-->
+
+                        <div class="col-12">
+                            <div class="mt-4 pt-2 text-right">
+                                <a href="javascript:void(0)" class="btn btn-info">Read More <i class="mdi mdi-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end row-->
+                </div>
+                <!--end col-->
+
+                <div class="col-lg-6 col-md-6 col-6">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <div class="card work-desk rounded border-0 shadow-lg overflow-hidden">
+                                <img src="https://www.bootdey.com/image/337x450/87CEFA/000000" class="img-fluid" alt="Image" />
+                                <div class="img-overlay bg-dark"></div>
+                            </div>
+                        </div>
+                        <!--end col-->
+
+                        <div class="col-lg-12 col-md-12 mt-4 pt-2">
+                            <div class="card work-desk rounded border-0 shadow-lg overflow-hidden">
+                                <img src="https://www.bootdey.com/image/600x401/FF7F50/000000" class="img-fluid" alt="Image" />
+                                <div class="img-overlay bg-dark"></div>
+                            </div>
+                        </div>
+                        <!--end col-->
+                    </div>
+                    <!--end row-->
+                </div>
+                <!--end col-->
             </div>
+            <!--end row-->
+        </div>
+        <!--end col-->
+
+        <div class="col-lg-6 col-md-6 col-12 order-1 order-md-2">
+            <div class="section-title ml-lg-5">
+                <h2 class="text-custom font-weight-normal mb-3">About Us</h2>
+                <h4 class="title mb-4">
+                Nous visons à promouvoir <br> et à soutenir les artisans locaux en facilitant <br>l'accès aux services et en encourageant la collaboration entre prestataires et clients.
+
+
+                </h4>
+                <p class="text-muted mb-0">Bienvenue sur (nom de votre application), une plateforme dédiée à la promotion des métiers artisanaux. Notre application facilite la connexion entre les prestataires de services artisanaux et les clients à la recherche de compétences spécifiques. Que vous ayez besoin de services de construction, de réparation, de design ou d'autres métiers artisanaux, vous trouverez ici une communauté de prestataires qualifiés prêts à répondre à vos besoins.</p>
+
+                <div class="row">
+                    <div class="col-lg-6 mt-4 pt-2">
+                        <div class="media align-items-center rounded shadow p-3">
+                            <i class="fa fa-play h4 mb-0 text-custom"></i>
+                            <h6 class="ml-3 mb-0"><a href="javascript:void(0)" class="text-dark">Responsive</a></h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mt-4 pt-2">
+                        <div class="media align-items-center rounded shadow p-3">
+                            <i class="fa fa-file-download h4 mb-0 text-custom"></i>
+                            <h6 class="ml-3 mb-0"><a href="javascript:void(0)" class="text-dark">Free Download</a></h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mt-4 pt-2">
+                        <div class="media align-items-center rounded shadow p-3">
+                            <i class="fa fa-user h4 mb-0 text-custom"></i>
+                            <h6 class="ml-3 mb-0"><a href="javascript:void(0)" class="text-dark">Support</a></h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mt-4 pt-2">
+                        <div class="media align-items-center rounded shadow p-3">
+                            <i class="fa fa-image h4 mb-0 text-custom"></i>
+                            <h6 class="ml-3 mb-0"><a href="javascript:void(0)" class="text-dark">Development</a></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end col-->
+    </div>
+    <!--enr row-->
+</div>
         </section>
         <!-- Team-->
         <section class="page-section bg-light" id="team">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="section-heading text-uppercase">List Of Prestataire</h2>
+                    <h3 class="section-subheading text-muted">Chaque domaine artisanal comporte de nombreux métiers et spécialisations</h3>
                 </div>
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/1.jpg" alt="..." />
+                            <img class="mx-auto rounded-circle" src="storage/photos/HfFlAJDZ08AvZrFVweBiNGHVjEg3BqHpfb65h37C.jpg" alt="..." />
                             <h4>Parveen Anand</h4>
-                            <p class="text-muted">Lead Designer</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Twitter Profile"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Facebook Profile"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
+                            <p class="text-muted">Menuisier</p>
+                            <a class="btn btn-primary btn-sm text-uppercase" href="{{ route('register') }}">Demande Service</a>
+                            </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/2.jpg" alt="..." />
-                            <h4>Diana Petersen</h4>
-                            <p class="text-muted">Lead Marketer</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Twitter Profile"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Facebook Profile"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                            <img class="mx-auto rounded-circle" src="storage/photos/fQRqFEsu0CSq7ZJao6oazlrZoPXQP4kTbW4ZRwiD.jpg" alt="..." />
+                            <h4>Parker Petersen</h4>
+                            <p class="text-muted">Verriers</p>
+                            <a class="btn btn-primary btn-sm text-uppercase" href="{{ route('register') }}">Demande Service</a>
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -304,14 +383,16 @@
                             <img class="mx-auto rounded-circle" src="assets/img/team/3.jpg" alt="..." />
                             <h4>Larry Parker</h4>
                             <p class="text-muted">Lead Developer</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Twitter Profile"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Facebook Profile"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-primary btn-sm text-uppercase" href="{{ route('register') }}">Demande Service</a>
+
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p></div>
+                    <div class="col-lg-8 mx-auto text-center">
+                        <p class="large text-muted">Les artisans sont des professionnels spécialisés dans des métiers manuels ou créatifs qui requièrent souvent un haut niveau de compétence technique et artistique. Leur travail est souvent caractérisé par l'attention portée aux détails, la maîtrise des matériaux et des outils traditionnels, ainsi que la capacité à créer des pièces uniques et personnalisées. </p>
+                        <a class="btn btn-danger btn-sm text-lowercase" href="{{ route('register') }}">Voir Plus ↓</a>
+                        </div>
                 </div>
             </div>
         </section>
@@ -337,13 +418,12 @@
         <!-- Contact-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
 
-<section class="pt-8 pt-md-9">
+<!-- <section class="pt-8 pt-md-9">
     <div class="container">
       <h2 class="text-dark fw-normal">
         Get answers
       </h2>
 
-      <!-- Form -->
       <form class="mt-4">
         <div class="input-group input-group-lg shadow-sm">
           <span class="input-group-text border-0">
@@ -360,7 +440,6 @@
         </div>
       </form>
 
-      <!-- Categories -->
       <div class="row mt-6">
         <div class="col-12 mb-4">
           <span class="badge bg-pastel-primary text-primary text-uppercase-bold-sm">
@@ -368,7 +447,6 @@
           </span>
         </div>
 
-        <!-- Category -->
         <div class="col-md-3 mb-4">
           <a href="#" class="card align-items-center text-decoration-none border-0 hover-lift-light py-4">
             <span class="icon-circle icon-circle-lg bg-pastel-primary text-primary">
@@ -380,7 +458,6 @@
           </a>
         </div>
 
-        <!-- Category -->
         <div class="col-md-3 mb-4">
           <a href="#" class="card align-items-center text-decoration-none border-0 hover-lift-light py-4">
             <span class="icon-circle icon-circle-lg bg-pastel-primary text-primary">
@@ -392,7 +469,6 @@
           </a>
         </div>
 
-        <!-- Category -->
         <div class="col-md-3 mb-4">
           <a href="#" class="card align-items-center text-decoration-none border-0 hover-lift-light py-4">
             <span class="icon-circle icon-circle-lg bg-pastel-primary text-primary">
@@ -404,7 +480,6 @@
           </a>
         </div>
 
-        <!-- Category -->
         <div class="col-md-3 mb-4">
           <a href="#" class="card align-items-center text-decoration-none border-0 hover-lift-light py-4">
             <span class="icon-circle icon-circle-lg bg-pastel-primary text-primary">
@@ -416,7 +491,6 @@
           </a>
         </div>
 
-        <!-- Category -->
         <div class="col-md-3 mb-4">
           <a href="#" class="card align-items-center text-decoration-none border-0 hover-lift-light py-4">
             <span class="icon-circle icon-circle-lg bg-pastel-primary text-primary">
@@ -428,7 +502,6 @@
           </a>
         </div>
 
-        <!-- Category -->
         <div class="col-md-3 mb-4">
           <a href="#" class="card align-items-center text-decoration-none border-0 hover-lift-light py-4">
             <span class="icon-circle icon-circle-lg bg-pastel-primary text-primary">
@@ -440,7 +513,6 @@
           </a>
         </div>
 
-        <!-- Category -->
         <div class="col-md-3 mb-4">
           <a href="#" class="card align-items-center text-decoration-none border-0 hover-lift-light py-4">
             <span class="icon-circle icon-circle-lg bg-pastel-primary text-primary">
@@ -452,7 +524,6 @@
           </a>
         </div>
 
-        <!-- Category -->
         <div class="col-md-3 mb-4">
           <a href="#" class="card align-items-center text-decoration-none border-0 hover-lift-light py-4">
             <span class="icon-circle icon-circle-lg bg-pastel-primary text-primary">
@@ -465,10 +536,8 @@
         </div>
       </div>
     </div>
-  </section>
-  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css'>
-
-<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js'></script>
+  </section>-->
+  
         <section class="page-section" id="contact">
             <div class="container">
                 <div class="text-center">
@@ -765,9 +834,11 @@
         <!-- Core theme JS-->
         <script>
             
-window.addEventListener('DOMContentLoaded', event => {
 
-// Navbar shrink function
+
+            window.addEventListener('DOMContentLoaded', event => {
+
+// Navbar shrink function -->
 var navbarShrink = function () {
     const navbarCollapsible = document.body.querySelector('#mainNav');
     if (!navbarCollapsible) {

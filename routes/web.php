@@ -10,6 +10,8 @@ use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\PaymentController;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -32,10 +34,8 @@ Route::post('/messages', [MessageController::class, 'sendMessage']);
 
 });
 // routes/web.php
+Route::get('payment', [PaymentController::class, 'index'])->name('payment.index');
 
-Route::get('paymant', function () {
-    return view('payment.paymant-bk');
-});
 
 Route::get('/services_all', [ServiceController::class, 'allServices'])->name('services_all')->middleware('auth');
 Route::get('/services', [ServiceController::class, 'index'])->name('services');
