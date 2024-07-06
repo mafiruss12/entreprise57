@@ -18,7 +18,7 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name', 'surname', 'email', 'phone', 'address', 'role', 'password', 'photo'
+        'name', 'surname', 'email', 'phone', 'address', 'role', 'password', 'photo','two_factor_secret',
     ];
 
     /**
@@ -44,5 +44,10 @@ public function services()
 {
     return $this->hasMany(Service::class);
 }
-
+// Ajoutez cette méthode ou un attribut si vous utilisez un package pour l'authentification à deux facteurs
+public function getTwoFactorEnabledAttribute()
+{
+    // Retournez true ou false selon que l'authentification à deux facteurs est activée
+    return $this->two_factor_secret !== null;
+}
 }

@@ -179,55 +179,97 @@
               <div class="tab-pane" id="account">
                 <h6>ACCOUNT SETTINGS</h6>
                 <hr>
-                <form>
-                  <div class="form-group">
-                    <label for="username">Username</label>
-                    <input type="text" class="form-control" id="username" aria-describedby="usernameHelp" placeholder="Enter your username" value="kennethvaldez">
-                    <small id="usernameHelp" class="form-text text-muted">After changing your username, your old username becomes available for anyone else to claim.</small>
-                  </div>
-                  <hr>
-                  <div class="form-group">
-                    <label class="d-block text-danger">Delete Account</label>
-                    <p class="text-muted font-size-sm">Once you delete your account, there is no going back. Please be certain.</p>
-                  </div>
-                  <button class="btn btn-danger" type="button">Delete Account</button>
-                </form>
+              <!-- Formulaire HTML -->
+<form>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="text" class="form-control" id="email" aria-describedby="email" placeholder="Enter your email" value="{{ auth()->user()->email }}">
+    <small id="usernameHelp" class="form-text text-muted">After changing your email, your old email becomes available for anyone else to claim.</small>
+  </div>
+  <hr>
+  <div class="form-group">
+    <label class="d-block text-danger">Delete Account</label>
+    <p class="text-muted font-size-sm">Once you delete your account, there is no going back. Please be certain.</p>
+  </div>
+  <button class="btn btn-danger" type="button" data-toggle="modal" data-target="#deleteAccountModal">Delete Account</button>
+</form>
+
+<!-- Modal de confirmation Bootstrap -->
+<div class="modal fade" id="deleteAccountModal" tabindex="-1" role="dialog" aria-labelledby="deleteAccountModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteAccountModalLabel">Confirm Account Deletion</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to delete your account? This action cannot be undone.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <form id="deleteAccountForm" method="POST" action="{{ route('delete.account') }}">
+          @csrf
+          @method('DELETE')
+          <button type="submit" class="btn btn-danger">Delete Account</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
               </div>
               <div class="tab-pane" id="security">
                 <h6>SECURITY SETTINGS</h6>
                 <hr>
-                <form>
-                  <div class="form-group">
-                    <label class="d-block">Change Password</label>
-                    <input type="text" class="form-control" placeholder="Enter your old password">
-                    <input type="text" class="form-control mt-1" placeholder="New password">
-                    <input type="text" class="form-control mt-1" placeholder="Confirm new password">
-                  </div>
-                </form>
+                <form id="changePasswordForm" method="POST" action="{{ route('password.change') }}">
+  @csrf
+  <div class="form-group">
+    <label class="d-block">Change Password</label>
+    <input type="password" name="old_password" class="form-control" placeholder="Enter your old password" required>
+    <input type="password" name="new_password" class="form-control mt-1" placeholder="New password" required>
+    <input type="password" name="new_password_confirmation" class="form-control mt-1" placeholder="Confirm new password" required>
+  </div><br>
+  <button type="submit" class="btn btn-primary">Change Password</button>
+</form>
                 <hr>
-                <form>
-                  <div class="form-group">
-                    <label class="d-block">Two Factor Authentication</label>
-                    <button class="btn btn-info" type="button">Enable two-factor authentication</button>
-                    <p class="small text-muted mt-2">Two-factor authentication adds an additional layer of security to your account by requiring more than just a password to log in.</p>
-                  </div>
-                </form>
+                <form id="enable2FAForm" method="POST" action="{{ route('twofactor.enable') }}">
+  @csrf
+  <div class="form-group">
+    <label class="d-block">Two Factor Authentication</label>
+    @if (auth()->user()->two_factor_enabled)
+      <button class="btn btn-success" type="submit">Two-factor authentication enabled</button>
+    @else
+      <button class="btn btn-info" type="submit">Enable two-factor authentication</button>
+    @endif
+    <p class="small text-muted mt-2">Two-factor authentication adds an additional layer of security to your account by requiring more than just a password to log in.</p>
+  </div>
+</form>
+
+
                 <hr>
-                <form>
-                  <div class="form-group mb-0">
-                    <label class="d-block">Sessions</label>
-                    <p class="font-size-sm text-secondary">This is a list of devices that have logged into your account. Revoke any sessions that you do not recognize.</p>
-                    <ul class="list-group list-group-sm">
-                      <li class="list-group-item has-icon">
-                        <div>
-                          <h6 class="mb-0">San Francisco City 190.24.335.55</h6>
-                          <small class="text-muted">Your current session seen in United States</small>
-                        </div>
-                        <button class="btn btn-light btn-sm ml-auto" type="button">More info</button>
-                      </li>
-                    </ul>
-                  </div>
-                </form>
+                <div class="container">
+    <div class="form-group mb-0">
+        <label class="d-block">Sessions</label>
+        <p class="font-size-sm text-secondary">This is a list of devices that have logged into your account. Revoke any sessions that you do not recognize.</p>
+        <ul class="list-group list-group-sm">
+            @foreach ($sessions as $session)
+                <li class="list-group-item has-icon">
+                    <div>
+                        <h6 class="mb-0">{{ $session->name }}</h6>
+                        <small class="text-muted">Last used: {{ $session->last_used_at }}</small>
+                    </div>
+                    <form method="POST" action="{{ route('sessions.revoke', $session->id) }}">
+                        @csrf
+                        @method('DELETE')
+                        <button class="btn btn-light btn-sm ml-auto" type="submit">Revoke</button>
+                    </form>
+                </li>
+            @endforeach
+        </ul>
+    </div>
+</div>
               </div>
               <div class="tab-pane" id="notification">
                 <h6>NOTIFICATION SETTINGS</h6>

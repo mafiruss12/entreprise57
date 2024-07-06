@@ -11,6 +11,9 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\SessionController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -23,7 +26,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/chat', [ChatController::class, 'index'])->name('chat.index');
     Route::get('/chat/messages/{id}', [ChatController::class, 'fetchMessages'])->name('chat.fetchMessages');
     Route::post('/chat/messages', [ChatController::class, 'sendMessage'])->name('chat.sendMessage');
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/dashboard', [DashboardController::class, 'showClients'])->name('dashboard');
     Route::get('/profile', [ProfileController::class, 'show'])->name('profile.show');
     Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
 
@@ -39,6 +42,10 @@ Route::get('payment', [PaymentController::class, 'index'])->name('payment.index'
 
 Route::get('/services_all', [ServiceController::class, 'allServices'])->name('services_all')->middleware('auth');
 Route::get('/services', [ServiceController::class, 'index'])->name('services');
+Route::post('/verify-id', [UserController::class, 'verifyId'])->name('verify.id');
+// routes/web.php
+
+Route::delete('/delete-account', [UserController::class, 'destroy'])->name('delete.account');
 
 
 // Dans votre fichier de routes web (web.php)
@@ -63,6 +70,12 @@ Route::get('password/reset', [ForgotPasswordController::class, 'showLinkRequestF
 Route::post('password/email', [ForgotPasswordController::class, 'sendResetLinkEmail'])->name('password.email');
 Route::get('password/reset/{token}', [ResetPasswordController::class, 'showResetForm'])->name('password.reset');
 Route::post('password/reset', [ResetPasswordController::class, 'reset'])->name('password.update');
+
+Route::post('/change-password', [UserController::class, 'changePassword'])->name('password.change');
+Route::post('/enable-twofactor', [UserController::class, 'enableTwoFactor'])->name('twofactor.enable');
+
+Route::get('/profile/settings', [SessionController::class, 'index'])->name('profile.settings');
+Route::delete('/sessions/{token}', [SessionController::class, 'revoke'])->name('sessions.revoke');
 
 
 

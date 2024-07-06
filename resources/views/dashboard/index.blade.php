@@ -368,6 +368,48 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 
 <div class="container">
+  <!-- Modal Bootstrap pour demander la pièce d'identité -->
+<!-- Modal Bootstrap pour demander la pièce d'identité -->
+<div class="modal fade" id="idVerificationModal" tabindex="-1" role="dialog" aria-labelledby="idVerificationModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="idVerificationModalLabel">Vérification de l'identité</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form id="idVerificationForm" method="POST" enctype="multipart/form-data" action="{{ route('verify.id') }}">
+                @csrf
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="idDocument">Télécharger votre pièce d'identité</label>
+                        <input type="file" class="form-control" id="idDocument" name="idDocument" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                    <button type="submit" class="btn btn-primary">Soumettre</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Script pour afficher le popup si l'utilisateur n'a pas vérifié son identité -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        @auth // Vérifie si l'utilisateur est connecté
+            @if(Auth::user()->id_verified && !Auth::user()->id_approved)
+            @elseif(!Auth::user()->id_verified)
+                alert('Votre pièce d\'identité a été rejetée. Veuillez soumettre une nouvelle pièce.'); // Message d'alerte si la pièce d'identité est rejetée
+                $('#idVerificationModal').modal('show'); // Affiche le modal si la pièce d'identité est vérifiée mais non approuvée
+                @endif
+        @endauth
+    });
+</script>
+
 <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4">
        <div class="col">
 		 <div class="card radius-10 border-start border-0 border-3 border-info">
@@ -449,30 +491,18 @@
                     </div>
             
                     <div class="widget-signups__list">
-                        <a data-toggle="tooltip" title="" href="" data-original-title="Jani Popovich"><img class="avatar-img" src="http://bootdey.com/img/Content/avatar/avatar1.png" alt=""></a>
-                        <a data-toggle="tooltip" title="" href="" data-original-title="Rosina Lamont"><div class="avatar-char">R</div></a>
-                        <a data-toggle="tooltip" title="" href="" data-original-title="Wava Vermeulen"><div class="avatar-char">W</div></a>
-                        <a data-toggle="tooltip" title="" href="" data-original-title="Delisa Sheilds"><img class="avatar-img" src="http://bootdey.com/img/Content/avatar/avatar2.png" alt=""></a>
-                        <a data-toggle="tooltip" title="" href="" data-original-title="Elsy Wilhoit"><img class="avatar-img" src="http://bootdey.com/img/Content/avatar/avatar3.png" alt=""></a>
-                        <a data-toggle="tooltip" title="" href="" data-original-title="Deanne Jeffreys"><div class="avatar-char">D</div></a>
-                        <a data-toggle="tooltip" title="" href="" data-original-title="ddsds"><div class="avatar-char">F</div></a>
-                        <a data-toggle="tooltip" title="" href="" data-original-title="Shery Heredia"><div class="avatar-char">S</div></a>
-                        <a data-toggle="tooltip" title="" href="" data-original-title="Gaylord Coolbaugh"><div class="avatar-char">G</div></a>
-                        <a data-toggle="tooltip" title="" href="" data-original-title="Lyda Wortman"><div class="avatar-char">L</div></a>
-                        <a data-toggle="tooltip" title="" href="" data-original-title="Corene Langstaff"><img class="avatar-img" src="http://bootdey.com/img/Content/avatar/avatar4.png" alt=""></a>
-                        <a data-toggle="tooltip" title="" href="" data-original-title="Aracely Goudeau"><img class="avatar-img" src="http://bootdey.com/img/Content/avatar/avatar5.png" alt=""></a>
-                        <a data-toggle="tooltip" title="" href="" data-original-title="Matilde Weibel"><div class="avatar-char">M</div></a>
-                        <a data-toggle="tooltip" title="" href="" data-original-title="Clement Mayor"><div class="avatar-char">C</div></a>
-                        <a data-toggle="tooltip" title="" href="" data-original-title="Phil Wyatt"><div class="avatar-char">P</div></a>
-                        <a data-toggle="tooltip" title="" href="" data-original-title="Altagracia Manke"><div class="avatar-char">A</div></a>
-                        <a data-toggle="tooltip" title="" href="" data-original-title="Siu Derosier"><div class="avatar-char">S</div></a>
-                        <a data-toggle="tooltip" title="" href="" data-original-title="Nigel Shipe"><img class="avatar-img" src="http://bootdey.com/img/Content/avatar/avatar6.png" alt=""></a>
-                        <a data-toggle="tooltip" title="" href="" data-original-title="Bossman"><div class="avatar-char">B</div></a>
-                        <a data-toggle="tooltip" title="" href="" data-original-title="Crystal Markel"><div class="avatar-char">C</div></a>
-                        <a data-toggle="tooltip" title="" href="" data-original-title="Noman Nottage"><div class="avatar-char">N</div></a>
-                        <a data-toggle="tooltip" title="" href="" data-original-title="Melonie Carreira"><img class="avatar-img" src="http://bootdey.com/img/Content/avatar/avatar7.png" alt=""></a>
-                        <a data-toggle="tooltip" title="" href="" data-original-title="Shaneka Hoyle"><div class="avatar-char">S</div></a>
-                        <a data-toggle="tooltip" title="" href="" data-original-title="Milagro Evans"><div class="avatar-char">M</div></a>
+                    <div class="widget-signups__list">
+    @foreach($clients as $client)
+        <a data-toggle="tooltip" title="{{ $client->name }}" href="">
+            @if($client->photo)
+                <img class="avatar-img" src="{{ asset('storage/' . $client->photo) }}" alt="{{ $client->name }}">
+            @else
+                <div class="avatar-char">{{ strtoupper(substr($client->name, 0, 1)) }}</div>
+            @endif
+        </a>
+    @endforeach
+</div>
+
                     </div>
                 </div>
                 </div>
