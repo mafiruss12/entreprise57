@@ -37,7 +37,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Project</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="#team">Prestataire</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
@@ -103,8 +103,8 @@
         <section class="page-section bg-light" id="portfolio">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Portfolio</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="section-heading text-uppercase">PROJECT</h2>
+                    <h3 class="section-subheading text-muted">Quelque Projet Réaliser par Artisan CI</h3>
                 </div>
                 <div class="row">
                     <div class="col-lg-4 col-sm-6 mb-4">
@@ -319,7 +319,7 @@
 
 
                 </h4>
-                <p class="text-muted mb-0">Bienvenue sur (nom de votre application), une plateforme dédiée à la promotion des métiers artisanaux. Notre application facilite la connexion entre les prestataires de services artisanaux et les clients à la recherche de compétences spécifiques. Que vous ayez besoin de services de construction, de réparation, de design ou d'autres métiers artisanaux, vous trouverez ici une communauté de prestataires qualifiés prêts à répondre à vos besoins.</p>
+                <p class="text-muted mb-0">Bienvenue sur <b><em>Artisan CI</em></b>, une plateforme dédiée à la promotion des métiers artisanaux. Notre application facilite la connexion entre les prestataires de services artisanaux et les clients à la recherche de compétences spécifiques. Que vous ayez besoin de services de construction, de réparation, de design ou d'autres métiers artisanaux, vous trouverez ici une communauté de prestataires qualifiés prêts à répondre à vos besoins.</p>
 
                 <div class="row">
                     <div class="col-lg-6 mt-4 pt-2">
