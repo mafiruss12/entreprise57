@@ -7,5 +7,23 @@
     "dashboard":"salpicadero",
     "search":"busque",
     "servicios":"servicios",
-    "edit profile":"editar perfil"
+    "edit profile":"editar perfil",
+    
+        "Last seen 1 second ago": "Visto por última vez hace 1 segundo",
+        "Change Photo": "Cambiar foto",
+        "Parametre": "Configuración",
+        "Name": "Nombre",
+        "E-Mail Address": "Dirección de correo electrónico",
+        "Phone": "Teléfono",
+        "Address": "Dirección",
+        "Modifier la photo": "Modificar la foto",
+        "Choisir un fichier": "Elegir un archivo",
+        "Aucun fichier choisi": "Ningún archivo elegido",
+        "Modifier Profil": "Actualizar perfil",
+        "Assistant Client": "Asistente de cliente",
+        "Get fast, free help from our friendly assistants.": "Obtenga ayuda rápida y gratuita de nuestros asistentes amigables.",
+        "Contactez-nous": "Contáctenos",
+        "Logout": "Cerrar sesión"
+    
+    
 }

@@ -2,90 +2,47 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
+// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable;
+    use HasApiTokens, HasFactory, Notifiable;
 
     /**
      * The attributes that are mass assignable.
      *
-     * @var array
+     * @var array<int, string>
      */
     protected $fillable = [
-        'name', 'email', 'password', 'avatar',
+        'name', 'surname', 'email', 'phone', 'address', 'role', 'password', 'photo'
     ];
 
     /**
-     * The attributes that should be hidden for arrays.
+     * The attributes that should be hidden for serialization.
      *
-     * @var array
+     * @var array<int, string>
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password',
+        'remember_token',
     ];
 
     /**
-     * The attributes that should be cast to native types.
+     * The attributes that should be cast.
      *
-     * @var array
+     * @var array<string, string>
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
-    public function isClient()
-    {
-        return $this->role === 'client';
-    }
-
-    public function isArtisan()
-    {
-        return $this->role === 'artisan';
-    }
-
-
-
-    public function services()
-    {
-        return $this->hasMany(Service::class);
-    }
-
-    public function serviceRequests()
-    {
-        if ($this->isClient()) {
-            return $this->hasMany(ServiceRequest::class, 'client_id');
-        } elseif ($this->isArtisan()) {
-            return $this->hasMany(ServiceRequest::class, 'artisan_id');
-        }
-        return null;
-    }
-
-    public function reviews()
-    {
-        if ($this->isClient()) {
-            return $this->hasMany(Review::class, 'client_id');
-        } elseif ($this->isArtisan()) {
-            return $this->hasMany(Review::class, 'artisan_id');
-        }
-        return null;
-    }
-
-    public function sentMessages()
-    {
-        return $this->hasMany(Message::class, 'sender_id');
-    }
-
-    public function receivedMessages()
-    {
-        return $this->hasMany(Message::class, 'receiver_id');
-    }
-    public function artisanServices()
+    // App\Models\User.php
+public function services()
 {
-    return $this->hasMany(ArtisanService::class);
+    return $this->hasMany(Service::class);
 }
+
 }

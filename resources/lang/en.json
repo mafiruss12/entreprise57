@@ -7,5 +7,21 @@
     "dashboard":"Dashboard",
     "search ":"Search",
     "services":"services",
-    "edit profile":"edit profile"
+    "edit profile":"edit profile",
+    "Last seen 1 second ago": "Last seen 1 second ago",
+    "Change Photo": "Change Photo",
+    "Parametre": "Settings",
+    "Name": "Name",
+    "E-Mail Address": "E-Mail Address",
+    "Phone": "Phone",
+    "Address": "Address",
+    "Choose a file": "Choose a file",
+    "No file chosen": "No file chosen",
+    "Update Profile": "Update Profile",
+    "Assistant Client": "Client Assistant",
+    "Get fast, free help from our friendly assistants.": "Get fast, free help from our friendly assistants.",
+    "Contact Us": "Contact Us",
+    "Logout": "Logout"
+    
+    
 }

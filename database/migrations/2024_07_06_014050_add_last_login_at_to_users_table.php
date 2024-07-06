@@ -9,15 +9,14 @@ return new class extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('avatar')->nullable()->after('email'); // Adjust field position as per your schema
+            $table->timestamp('last_login_at')->nullable();
         });
     }
-    
+
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('avatar');
+            $table->dropColumn('last_login_at');
         });
     }
-    
 };

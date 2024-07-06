@@ -4,15 +4,24 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class ProfileController extends Controller
 {
     public function show()
     {
-        $user = Auth::user();
-        $services = $user->services; // Récupère les services de l'utilisateur
+        // Supposons que l'utilisateur connecté est récupéré
+        $user = auth()->user();
+
+        // Initialiser $services comme une collection vide par défaut
+        $services = collect();
+
+        // Si l'utilisateur est un prestataire, récupérer ses services
+        if ($user->role === 'prestataire') {
+            $services = $user->services; // Récupérer les services associés à l'utilisateur
+        }
         
-        return view('pages.profile', compact('user', 'services'));
+        return view('pages.profile', compact('services'));
     }
     
     public function settings()
@@ -36,26 +45,31 @@ class ProfileController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users,email,' . $user->id,
-            'avatar' => 'image|mimes:jpeg,png,jpg,gif|max:2048', // Adjust max size as per your requirement
-        ]);
+            'photo' => 'image|mimes:jpeg,png,jpg,gif|max:2048', // Ajustez la taille maximale selon vos besoins
+            'phone' => 'nullable|string|max:255',
+            'address' => 'nullable|string|max:255',]);
 
         $user->name = $request->name;
         $user->email = $request->email;
-       // Handle avatar upload
-   
-       if ($request->hasFile('avatar')) {
-        // Delete the old avatar if it exists
-        if ($user->avatar) {
-            Storage::disk('public')->delete($user->avatar);
+        $user->phone = $request->phone;
+        $user->address = $request->address;
+        // Gestion de l'upload de la photo
+        if ($request->hasFile('photo')) {
+            $file = $request->file('photo');
+            $filename = time() . '.' . $file->getClientOriginalExtension();
+            $path = $file->storeAs('photos', $filename, 'public');
+
+            // Supprimer l'ancienne photo si elle existe
+            if ($user->photo) {
+                Storage::disk('public')->delete($user->photo);
+            }
+
+            // Mettre à jour la photo de l'utilisateur
+            $user->photo = $path;
         }
 
-        // Store the new avatar
-        $avatarPath = $request->file('avatar')->store('avatars', 'public');
-        $user->avatar = $avatarPath;
-    }
         $user->save();
 
-        return redirect()->route('profile.edit')->with('success', 'Profil mis à jour avec succès');
+        return redirect()->route('profile.edit')->with('success', 'Profil mis à jour avec succès.');
     }
 }
-

@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>401</title>
+</head>
+<body>
+    
 <x-layout bodyClass="bg-gray-200">
   <div class="container position-sticky z-index-sticky top-0">
       <div class="row">
@@ -22,4 +31,5 @@
       </div>
   </div>
       <x-footers.guest></x-footers.guest>
-</x-layout>
+</x-layout></body>
+</html>

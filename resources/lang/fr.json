@@ -7,5 +7,23 @@
     "dashboard":"Tableau de bord",
     "search":"Recherche",
     "services":"services",
-    "edit profile":"modifier le profil"
+    "edit profile":"modifier le profil",
+    
+        "Last seen 1 second ago": "Vu pour la dernière fois il y a 1 seconde",
+        "Change Photo": "Changer la photo",
+        "Parametre": "Paramètre",
+        "Name": "Nom",
+        "E-Mail Address": "Adresse e-mail",
+        "Phone": "Téléphone",
+        "Address": "Adresse",
+        "Modifier la photo": "Modifier la photo",
+        "Choisir un fichier": "Choisir un fichier",
+        "Aucun fichier choisi": "Aucun fichier choisi",
+        "Modifier Profil": "Modifier Profil",
+        "Assistant Client": "Assistant Client",
+        "Get fast, free help from our friendly assistants.": "Obtenez une aide rapide et gratuite de nos assistants amicaux.",
+        "Contactez-nous": "Contactez-nous",
+        "Logout": "Déconnexion"
+    
+    
 }

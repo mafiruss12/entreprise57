@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>403</title>
+    <title>405</title>
 </head>
 <style>
     $font: 'Poppins', sans-serif;

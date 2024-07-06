@@ -22,10 +22,10 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/chat/messages/{id}', [ChatController::class, 'fetchMessages'])->name('chat.fetchMessages');
     Route::post('/chat/messages', [ChatController::class, 'sendMessage'])->name('chat.sendMessage');
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-    Route::get('/services', [ServiceController::class, 'index'])->name('services');
     Route::get('/profile', [ProfileController::class, 'show'])->name('profile.show');
     Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::get('/profile/settings', [ProfileController::class, 'settings'])->name('profile.settings');
+
+     Route::get('/profile/settings', [ProfileController::class, 'settings'])->name('profile.settings');
     Route::post('/profile/update', [ProfileController::class, 'update'])->name('profile.update');
 Route::get('/messages/{user}', [MessageController::class, 'fetchMessages']);
 Route::post('/messages', [MessageController::class, 'sendMessage']);
@@ -36,7 +36,9 @@ Route::post('/messages', [MessageController::class, 'sendMessage']);
 Route::get('paymant', function () {
     return view('payment.paymant-bk');
 });
+
 Route::get('/services_all', [ServiceController::class, 'allServices'])->name('services_all')->middleware('auth');
+Route::get('/services', [ServiceController::class, 'index'])->name('services');
 
 
 // Dans votre fichier de routes web (web.php)
@@ -54,7 +56,6 @@ Route::get('register', [RegisterController::class, 'showRegistrationForm'])->nam
 Route::post('register', [RegisterController::class, 'register']);
 Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('login', [LoginController::class, 'login']);
-Route::post('services', [ServiceController::class, 'login']);
 Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
 // Configuration des routes pour la réinitialisation de mot de passe
@@ -62,14 +63,6 @@ Route::get('password/reset', [ForgotPasswordController::class, 'showLinkRequestF
 Route::post('password/email', [ForgotPasswordController::class, 'sendResetLinkEmail'])->name('password.email');
 Route::get('password/reset/{token}', [ResetPasswordController::class, 'showResetForm'])->name('password.reset');
 Route::post('password/reset', [ResetPasswordController::class, 'reset'])->name('password.update');
-
-// Route pour le formulaire de demande de service
-
-Auth::routes();
-
-Route::get('/home', [HomeController::class, 'index'])->name('home');
-
-// Routes pour le profil
 
 
 
