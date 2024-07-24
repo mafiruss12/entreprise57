@@ -27,7 +27,6 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/dashboard';
 
     /**
      * Create a new controller instance.
@@ -38,5 +37,13 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
         $this->middleware('auth')->only('logout');
+    }
+    protected function redirectPath()
+    {
+        if (auth()->user()->role == 'prestataire') {
+            return '/dashboard';
+        }
+
+        return '/dashboard/client';
     }
 }

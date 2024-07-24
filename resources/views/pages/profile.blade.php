@@ -494,9 +494,9 @@ background-color:#f1f5f9;
             </div>
           </div>
           <div>
-            <a href="{{ route('profile.edit') }}"  class="btn btn-outline-primary
-  d-none d-md-block">{{ __('edit profile') }}</a>
-          </div>
+          @if (auth()->check() && auth()->id() === $user->id)
+    <a href="{{ route('profile.edit') }}" class="btn btn-outline-primary d-none d-md-block">{{ __('edit profile') }}</a>
+@endif
         </div>
         <div class="container">
     <ul class="nav nav-lt-tab px-4" id="pills-tab" role="tablist">

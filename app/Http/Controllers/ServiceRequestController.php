@@ -81,4 +81,45 @@ class ServiceRequestController extends Controller
     {
         //
     }
+    public function requestService(Request $request)
+{
+    try {
+        \Log::info('Request received', $request->all());  // Log the request data
+
+        $request->validate([
+            'service_id' => 'required|exists:services,id',
+        ]);
+
+        $clientId = Auth::id();
+        $serviceId = $request->input('service_id');
+        $prestataireId = $request->input('prestataire_id');
+
+        // Check if the request already exists
+        $existingRequest = ServiceRequest::where('service_id', $serviceId)
+                            ->where('client_id', $clientId)
+                            ->first();
+
+        if ($existingRequest) {
+            return response()->json(['status' => $existingRequest->status]);
+        }
+
+        $serviceRequest = new ServiceRequest([
+            'service_id' => $serviceId,
+            'client_id' => $clientId,
+            'prestataire_id' => $prestataireId,
+            'status' => 'pending',
+            'description' => 'Requesting service',
+        ]);
+
+        $serviceRequest->save();
+
+        \Log::info('Service request created', $serviceRequest->toArray());  // Log the created service request
+
+        return response()->json(['status' => 'pending']);
+    } catch (\Exception $e) {
+        \Log::error('Error processing service request: ' . $e->getMessage());  // Log the error message
+        return response()->json(['error' => 'Error processing service request'], 500);
+    }
+}
+
 }

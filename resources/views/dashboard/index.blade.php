@@ -374,9 +374,9 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="idVerificationModalLabel">Vérification de l'identité</h5>
+                <h5 class="modal-title" id="idVerificationModalLabel">Vérification de l'identité</h5>  
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
+                    <span aria-hidden="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&times;</span>
                 </button>
             </div>
             <form id="idVerificationForm" method="POST" enctype="multipart/form-data" action="{{ route('verify.id') }}">
@@ -473,38 +473,46 @@
 	  </div> 
     
 	</div>
-  <div class="col-md-6 mt-3">
-            <div class="card widget-signups">
-                <div class="card-body">
-                    <h4 class="card-title">List of Customers (new Service)</h4>
-                    <h6 class="card-subtitle">New Service </h6>
-            
-                    <div class="actions actions--inverse">
-                        <div class="actions__item">
-                            <i data-toggle="dropdown" class="zmdi zmdi-more-vert" aria-expanded="false"></i>
-                            <div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; transform: translate3d(35px, 28px, 0px); top: 0px; left: 0px; will-change: transform;">
-                                <a href="" class="dropdown-item">Refresh</a>
-                                <a href="" class="dropdown-item">Manage Widgets</a>
-                                <a href="" class="dropdown-item">Settings</a>
-                            </div>
-                        </div>
-                    </div>
-            
-                    <div class="widget-signups__list">
-                    <div class="widget-signups__list">
-    @foreach($clients as $client)
-        <a data-toggle="tooltip" title="{{ $client->name }}" href="">
-            @if($client->photo)
-                <img class="avatar-img" src="{{ asset('storage/' . $client->photo) }}" alt="{{ $client->name }}">
-            @else
-                <div class="avatar-char">{{ strtoupper(substr($client->name, 0, 1)) }}</div>
-            @endif
-        </a>
-    @endforeach
-</div>
+<!-- resources/views/dashboard/client.blade.php -->
+<!-- resources/views/dashboard/client.blade.php -->
 
+<div class="col-md-6 mt-3">
+    <div class="card widget-signups">
+        <div class="card-body">
+            <h4 class="card-title">List of Customers (new Service)</h4>
+            <h6 class="card-subtitle">New Service</h6>
+
+            <div class="actions actions--inverse">
+                <div class="actions__item">
+                    <i data-toggle="dropdown" class="zmdi zmdi-more-vert" aria-expanded="false"></i>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a href="" class="dropdown-item">Refresh</a>
+                        <a href="" class="dropdown-item">Manage Widgets</a>
+                        <a href="" class="dropdown-item">Settings</a>
                     </div>
                 </div>
+            </div>
+
+            <div class="widget-signups__list">
+            @foreach($clients as $client)
+                    <a data-toggle="tooltip" title="{{ $client->name }}" href="">
+                        @if($client->photo)
+                            <img class="avatar-img" src="{{ asset('storage/' . $client->photo) }}" alt="{{ $client->name }}">
+                        @else
+                            <div class="avatar-char">{{ strtoupper(substr($client->name, 0, 1)) }}</div>
+                        @endif
+                    </a>
+                @endforeach
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+                   
                 </div>
                 </div>
 </div>

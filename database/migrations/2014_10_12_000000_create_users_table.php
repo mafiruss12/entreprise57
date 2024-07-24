@@ -15,7 +15,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('phone')->nullable();
             $table->string('address')->nullable();
-            $table->enum('role', ['client', 'prestataire']);
+            $table->enum('role', ['client', 'prestataire','admin']);
             $table->string('photo')->nullable(); // Champ pour la photo
             $table->string('password');
             $table->rememberToken(); // Ajoute la colonne remember_token

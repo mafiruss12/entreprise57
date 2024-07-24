@@ -14,7 +14,7 @@ class RegisterController extends Controller
 {
     use RegistersUsers;
 
-    protected $redirectTo = '/dashboard';
+    
 
     public function __construct()
     {
@@ -53,5 +53,13 @@ class RegisterController extends Controller
     public function showRegistrationForm()
     {
         return view('auth.register');
+    }
+    protected function redirectPath()
+    {
+        if (auth()->user()->role == 'prestataire') {
+            return '/dashboard';
+        }
+
+        return '/dashboard/client';
     }
 }

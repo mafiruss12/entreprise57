@@ -394,16 +394,12 @@
 <div class="card-body">
                     <div id="map" style="height: 500px;"></div>
                 </div>
-<!-- Inclure les fichiers CSS et JS de Leaflet -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
 
 @endsection
 
 <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js" integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous"></script><script src="bootstrap-5.3.3-dist/js/dashboard.js"></script>
 </body>
 </html>
 

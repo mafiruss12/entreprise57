@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Connexion</title>
+    <title>{{ __('Connexion') }}</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
@@ -33,7 +33,7 @@
         <div class="signin-content">
             <div class="signin-image">
                 <figure><img src="images/signin-image.jpg" alt="sing up image"></figure>
-                <a href="{{ route('register') }}" class="signup-image-link">Créez un compte</a>
+                <a href="{{ route('register') }}" class="signup-image-link">{{ __('create account') }} </a>
             </div>
 
             <div class="signin-form">
@@ -54,7 +54,7 @@
 
                         <div class="form-group">
 
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Mot de passe">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="{{ __('Password') }}">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -70,7 +70,7 @@
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                                 
-                                    <label for="remember" class="form-check-label label-agree-term"><span><span></span></span>Se souvenir de moi</label>
+                                    <label for="remember" class="form-check-label label-agree-term"><span><span></span></span> {{ __('remember') }}</label>
 
                                 </div>
                             </div>
@@ -86,7 +86,7 @@
 
                             </div></center>@if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Mot de passe Oublié?') }}
+                                        {{ __('Forget Password') }}?
                                     </a>
                                 @endif
                         </div>

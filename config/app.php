@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Artisan SA'),
 
     /*
     |--------------------------------------------------------------------------
@@ -31,8 +31,8 @@ return [
     'env' => env('APP_ENV', 'production'),
 
 
-'locale' => 'en', // La langue par défaut de votre application
-'fallback_locale' => 'en', // La langue de secours si la traduction n'est pas trouvée
+'locale' => 'fr', // La langue par défaut de votre application
+'fallback_locale' => 'fr', // La langue de secours si la traduction n'est pas trouvée
 
     /*
     |--------------------------------------------------------------------------
@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'debug' => (bool) env('APP_DEBUG', false),
+    'debug' => (bool) env('APP_DEBUG', TRUE),
 
     /*
     |--------------------------------------------------------------------------
@@ -86,7 +86,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'fr',
 
     /*
     |--------------------------------------------------------------------------
@@ -99,7 +99,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'fr',
 
     /*
     |--------------------------------------------------------------------------
@@ -112,7 +112,7 @@ return [
     |
     */
 
-    'faker_locale' => 'en_US',
+    'faker_locale' => 'en_FR',
 
     /*
     |--------------------------------------------------------------------------

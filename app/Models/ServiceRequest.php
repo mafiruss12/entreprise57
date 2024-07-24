@@ -10,18 +10,20 @@ class ServiceRequest extends Model
         'service_id', 'client_id', 'prestataire_id', 'status', 'description',
     ];
 
-    // Définir la relation avec le service
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
     public function service()
     {
         return $this->belongsTo(Service::class);
     }
 
-    // Définir la relation avec le client
     public function client()
     {
         return $this->belongsTo(User::class, 'client_id');
     }
-
     // Définir la relation avec le prestataire
     public function prestataire()
     {

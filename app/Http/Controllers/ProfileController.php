@@ -21,7 +21,7 @@ class ProfileController extends Controller
             $services = $user->services; // Récupérer les services associés à l'utilisateur
         }
         
-        return view('pages.profile', compact('services'));
+        return view('pages.profile', compact('user','services'));
     }
     
     public function settings()

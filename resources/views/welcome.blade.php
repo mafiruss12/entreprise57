@@ -36,10 +36,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Project</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#team">Prestataire</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">{{ __('services') }}</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">{{ __('Project') }}</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">{{ __('About') }}</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#team">{{ __('Providers') }}</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -63,29 +63,29 @@
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
-                <div class="masthead-subheading">At Artisan CI</div>
-                <div class="masthead-heading text-uppercase">Welcome to our platform</div>
-                <a class="btn btn-primary btn-sm text-uppercase" href="{{ route('register') }}">sign up</a>
-                <a class="btn btn-secondary btn-sm text-uppercase" href="{{ route('login') }}">sign in</a>
+                <div class="masthead-subheading">{{ __('At Artisan CI') }}</div>
+                <div class="masthead-heading text-uppercase">{{ __('Welcome to our platform') }}</div>
+                <a class="btn btn-primary btn-sm text-uppercase" href="{{ route('register') }}">{{ __('sign up') }}</a>
+                <a class="btn btn-secondary btn-sm text-uppercase" href="{{ route('login') }}">{{ __('sign in') }} </a>
             </div>
         </header>
         <!-- Services-->
         <section class="page-section" id="services">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Some Services</h2>
-                    <h3 class="section-subheading text-muted">Offered by Artisans (Providers).
+                    <h2 class="section-heading text-uppercase">{{ __('Some Services') }}</h2>
+                    <h3 class="section-subheading text-muted"> {{ __('Offered by Artisans')}} ({{ __('Providers') }}).
                     .</h3>
                 </div>
                 <div class="row text-center">
     <div class="col-md-4">
         <img src="images/capture.png" alt="" class="custom-img">
-        <h4 class="my-3">Electrician</h4>
+        <h4 class="my-3">{{ __('Electrician') }}</h4>
         <p class="text-muted">Installation, repair, and maintenance of residential and commercial electrical systems.</p>
     </div>
     <div class="col-md-4">
         <img src="images/th.png" alt="" class="custom-img">
-        <h4 class="my-3">Plumber</h4>
+        <h4 class="my-3">{{ __('Plumber') }}</h4>
         <p class="text-muted">Plumbing services including installation and repair of piping, heating, cooling, and wastewater systems.</p>
     </div>
     <div class="col-md-4">
@@ -355,7 +355,7 @@
         <section class="page-section bg-light" id="team">
             <div class="container">
                 <div class="text-center">
-                <h2 class="section-heading text-uppercase">List Of Providers</h2>
+                <h2 class="section-heading text-uppercase">{{ __('List Of Providers') }}</h2>
                 <h3 class="section-subheading text-muted">Each artisanal domain has many trades and specializations</h3>
                 </div>
                 <div class="row">
@@ -364,7 +364,7 @@
                             <img class="mx-auto rounded-circle" src="storage/photos/HfFlAJDZ08AvZrFVweBiNGHVjEg3BqHpfb65h37C.jpg" alt="..." />
                             <h4>Parveen Anand</h4>
                             <p class="text-muted">Carpenter</p>
-                            <a class="btn btn-primary btn-sm text-uppercase" href="{{ route('register') }}">Request Service</a>
+                            <a class="btn btn-primary btn-sm text-uppercase" href="{{ route('register') }}">{{ __('Request Service') }}</a>
                             </div>
                     </div>
                     <div class="col-lg-4">
@@ -372,16 +372,16 @@
                             <img class="mx-auto rounded-circle" src="storage/photos/fQRqFEsu0CSq7ZJao6oazlrZoPXQP4kTbW4ZRwiD.jpg" alt="..." />
                             <h4>Parker Petersen</h4>
                             <p class="text-muted">Glassmaker</p>
-                    <a class="btn btn-primary btn-sm text-uppercase" href="{{ route('register') }}">Request Service</a>
+                    <a class="btn btn-primary btn-sm text-uppercase" href="{{ route('register') }}">{{ __('Request Service') }}</a>
                 </div>
-                        </div>
+                        
                     </div>
                     <div class="col-lg-4">
                         <div class="team-member">
                             <img class="mx-auto rounded-circle" src="assets/img/team/3.jpg" alt="..." />
                             <h4>Larry Parker</h4>
                             <p class="text-muted">Lead Developer</p>
-                    <a class="btn btn-primary btn-sm text-uppercase" href="{{ route('register') }}">Request Service</a>
+                    <a class="btn btn-primary btn-sm text-uppercase" href="{{ route('register') }}">{{ __('Request Service') }}</a>
 
                         </div>
                     </div>
@@ -389,7 +389,7 @@
                 <div class="row">
                     <div class="col-lg-8 mx-auto text-center">
                     <p class="large text-muted">Artisans are professionals specialized in manual or creative trades that often require a high level of technical and artistic skill. Their work is often characterized by attention to detail, mastery of materials and traditional tools, and the ability to create unique and personalized pieces.</p>
-                    <a class="btn btn-danger btn-sm text-lowercase" href="{{ route('register') }}">See More ↓</a>
+                    <a class="btn btn-danger btn-sm text-lowercase" href="{{ route('register') }}">{{ __('See More') }}↓</a>
                     </div>
                 </div>
             </div>
@@ -539,7 +539,7 @@
         <section class="page-section" id="contact">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Contact Us</h2>
+                    <h2 class="section-heading text-uppercase">{{ __('Contact Us') }}</h2>
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
                 <!-- * * * * * * * * * * * * * * *-->
@@ -554,25 +554,25 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <!-- Name input-->
-                                <input class="form-control" id="name" type="text" placeholder="Your Name *" data-sb-validations="required" />
+                                <input class="form-control" id="name" type="text" placeholder="{{ __('Your Name') }} *" data-sb-validations="required" />
                                 <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                             </div>
                             <div class="form-group">
                                 <!-- Email address input-->
-                                <input class="form-control" id="email" type="email" placeholder="Your Email *" data-sb-validations="required,email" />
+                                <input class="form-control" id="email" type="email" placeholder="{{ __('Your Email') }}  *" data-sb-validations="required,email" />
                                 <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
                                 <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                             </div>
                             <div class="form-group mb-md-0">
                                 <!-- Phone number input-->
-                                <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" data-sb-validations="required" />
+                                <input class="form-control" id="phone" type="tel" placeholder="{{ __('Your Phone') }} *" data-sb-validations="required" />
                                 <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group form-group-textarea mb-md-0">
                                 <!-- Message input-->
-                                <textarea class="form-control" id="message" placeholder="Your Message *" data-sb-validations="required"></textarea>
+                                <textarea class="form-control" id="message" placeholder="{{ __('Your Message') }} *" data-sb-validations="required"></textarea>
                                 <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
                             </div>
                         </div>
@@ -595,7 +595,7 @@
                     <!-- an error submitting the form-->
                     <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                     <!-- Submit Button-->
-                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase " id="submitButton" type="submit">Send Message</button></div>
+                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase " id="submitButton" type="submit">{{ __('Send Message') }}</button></div>
                 </form>
             </div>
         </section>
@@ -606,7 +606,7 @@
                     <div class="col-lg-4 text-lg-start">Copyright &copy; Your Website 2023</div>
                     <div class="col-lg-4 my-3 my-lg-0">
                         <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/profile.php?id=61562596393920&mibextid=LQQJ4d"  aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                     <div class="col-lg-4 text-lg-end">

@@ -21,7 +21,29 @@
     "Assistant Client": "Client Assistant",
     "Get fast, free help from our friendly assistants.": "Get fast, free help from our friendly assistants.",
     "Contact Us": "Contact Us",
-    "Logout": "Logout"
-    
-    
+    "Logout": "Logout",
+    "About":"About",
+    "Project":"Project",
+    "sign up":"sign up",
+    "sign in":"sign in",
+    "Welcome to our platform":"Welcome to our platform",
+    "List Of Providers":"List Of Providers",
+    "Request Service":"Request Service",
+    "See More":"See More",
+    "Providers":"Providers",
+    "Offered by Artisans":"Offered by Artisans",
+    "Some Services":"Some Services",
+    "Plumber":"Plumber",
+    "Electrician":"Electrician",
+    "Your Name":"Your Name",
+    "Your Email":"Your Email",
+    "Your Phone":"Your Phone",
+    "Your Message":"Your Message",
+    "Send Message":"Send Message",
+    "create account":"create account",
+    "Forget Password":"Forget Password",
+    "remember":"Remember",
+    "Connexion":"Login",
+    "Password":"Password",
+    "surname":"surname"
 }

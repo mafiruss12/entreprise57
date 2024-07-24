@@ -28,7 +28,7 @@ class ServiceController extends Controller
     // Afficher le formulaire pour créer un nouveau service
     public function create()
     {
-        return view('services.create');
+        return view('service.index', compact('services'));
     }
 
     // Enregistrer un nouveau service
@@ -45,17 +45,17 @@ class ServiceController extends Controller
         ]);
 
         // Créer et sauvegarder le nouveau service
-        $service = new Service();
-        $service->title = $request->input('title');
-        $service->description = $request->input('description');
-        $service->category = $request->input('category');
-        $service->availability = $request->input('availability');
-        $service->location = $request->input('location');
-        $service->photo = $request->input('photo');
-        $service->user_id = auth()->id(); // Lier le service à l'utilisateur connecté
-        $service->save();
+        $services = new Service();
+        $services->title = $request->input('title');
+        $services->description = $request->input('description');
+        $services->category = $request->input('category');
+        $services->availability = $request->input('availability');
+        $services->location = $request->input('location');
+        $services->photo = $request->input('photo');
+        $services->user_id = auth()->id(); // Lier le service à l'utilisateur connecté
+        $services->save();
 
-        return redirect()->route('services');
+        return view('services', compact('services'));
     }
 
     // Afficher un service spécifique

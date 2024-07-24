@@ -13,10 +13,19 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\SessionController;
+use App\Http\Controllers\NotificationController;
 
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/pages/notifications', function () {
+    return view('pages.notifications');
+});
+
+Route::get('/profile/details', function () {
+    return view('profile.details');
 });
 
 // Routes pour les services
@@ -26,8 +35,14 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/chat', [ChatController::class, 'index'])->name('chat.index');
     Route::get('/chat/messages/{id}', [ChatController::class, 'fetchMessages'])->name('chat.fetchMessages');
     Route::post('/chat/messages', [ChatController::class, 'sendMessage'])->name('chat.sendMessage');
-    Route::get('/dashboard', [DashboardController::class, 'showClients'])->name('dashboard');
-    Route::get('/profile', [ProfileController::class, 'show'])->name('profile.show');
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+        Route::post('/chat/send-request', [ChatController::class, 'sendRequest'])->name('chat.sendRequest');
+        Route::post('/chat/accept-request/{id}', [ChatController::class, 'acceptRequest'])->name('chat.acceptRequest');
+        Route::get('/chats', [ChatController::class, 'getChats'])->name('chats.index');
+
+
+    Route::get('dashboard/client', [DashboardController::class, 'showArtisan'])->name('dashboard.client');
+        Route::get('/profile', [ProfileController::class, 'show'])->name('profile.show');
     Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
 
      Route::get('/profile/settings', [ProfileController::class, 'settings'])->name('profile.settings');
@@ -37,7 +52,12 @@ Route::post('/messages', [MessageController::class, 'sendMessage']);
 
 });
 // routes/web.php
-Route::get('payment', [PaymentController::class, 'index'])->name('payment.index');
+Route::get('/payment', [PaymentController::class, 'index'])->name('payment.index');
+
+Route::post('/request-service', [DashboardController::class, 'requestService'])->name('request-service');
+
+Route::post('/sendSms', [NotificationController::class, 'sendNotification'])->name('send.sms');
+Route::view('/send-sms-form', 'sendSms');
 
 
 Route::get('/services_all', [ServiceController::class, 'allServices'])->name('services_all')->middleware('auth');
