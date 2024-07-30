@@ -13,12 +13,17 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\SessionController;
+<<<<<<< HEAD
 use App\Http\Controllers\NotificationController;
+=======
+use App\Http\Controllers\NetworkController;
+>>>>>>> 50c27fe (initial commit)
 
 
 Route::get('/', function () {
     return view('welcome');
 });
+<<<<<<< HEAD
 
 Route::get('/pages/notifications', function () {
     return view('pages.notifications');
@@ -27,6 +32,9 @@ Route::get('/pages/notifications', function () {
 Route::get('/profile/details', function () {
     return view('profile.details');
 });
+
+
+Route::get('/networks', [NetworkController::class, 'index']);
 
 // Routes pour les services
 
