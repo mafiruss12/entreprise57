@@ -17,7 +17,7 @@ use App\Http\Controllers\SessionController;
 use App\Http\Controllers\NotificationController;
 =======
 use App\Http\Controllers\NetworkController;
->>>>>>> 50c27fe (initial commit)
+
 
 
 Route::get('/', function () {
@@ -35,7 +35,7 @@ Route::get('/profile/details', function () {
 
 
 Route::get('/networks', [NetworkController::class, 'index']);
-
+>>>>>>> 50c27fe (initial commit)
 // Routes pour les services
 
 // Routes pour le chat
